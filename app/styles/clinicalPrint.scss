@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+@import "clinical";
+@import "print";
+@import "common/rtl";
+
+.dashboard-sections-wrapper .dashboard-sections.halfpage-container{
+  width: 100%;
+}

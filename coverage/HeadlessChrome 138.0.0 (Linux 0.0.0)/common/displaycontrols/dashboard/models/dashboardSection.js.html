@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for common/displaycontrols/dashboard/models/dashboardSection.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">common/displaycontrols/dashboard/models/</a> dashboardSection.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.88% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>31/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">90% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.88% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>31/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">73×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+(function () {
+    var OBSERVATION_SECTION_URL = "../common/displaycontrols/dashboard/views/sections/observationSection.html";
+    var COMMON_DISPLAY_CONTROL_URL = "../common/displaycontrols/dashboard/views/sections/SECTION_NAME.html";
+    var CLINICAL_DISPLAY_CONTROL_URL = "../clinical/dashboard/views/dashboardSections/SECTION_NAME.html";
+    var DISPLAY_CONTROL_REACT_URL = "../common/displaycontrols/dashboard/views/sections/nextUISection.html";
+    var commonDisplayControlNames = [
+        "admissionDetails",
+        "bacteriologyResultsControl",
+        "chronicTreatmentChart",
+        "custom",
+        "diagnosis",
+        "disposition",
+        "drugOrderDetails",
+        "forms",
+        "formsV2",
+        "observationGraph",
+        "obsToObsFlowSheet",
+        "pacsOrders",
+        "patientInformation",
+        "conditionsList"
+    ];
+    var reactDisplayControls = [
+        "allergies",
+        "formsV2React"
+    ];
+&nbsp;
+    var getViewUrl = function (section) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (reactDisplayControls.includes(section.type)) {
+<span class="cstat-no" title="statement not covered" >            return DISPLAY_CONTROL_REACT_URL;</span>
+        }
+        if (section.isObservation) {
+            return OBSERVATION_SECTION_URL;
+        }
+        var isCommonDisplayControl = _.includes(commonDisplayControlNames, section.type);
+        if (isCommonDisplayControl) {
+            return COMMON_DISPLAY_CONTROL_URL.replace('SECTION_NAME', section.type);
+        }
+        return CLINICAL_DISPLAY_CONTROL_URL.replace('SECTION_NAME', section.type);
+    };
+&nbsp;
+    var getId = function (section, $filter) {
+        if (section.type !== "custom") {
+            var key = section.translationKey || section.title;
+            return !_.isUndefined($filter) &amp;&amp; key ? $filter('titleTranslate')(key).toValidId() : key;
+        }
+    };
+&nbsp;
+    Bahmni.Common.DisplayControl.Dashboard.Section = function (section, $filter) {
+        angular.extend(this, section);
+        this.displayOrder = section.displayOrder;
+        this.data = section.data || {};
+        this.isObservation = !!section.isObservation;
+        this.patientAttributes = section.patientAttributes || [];
+        this.viewName = getViewUrl(this);
+        this.hideEmptyDisplayControl = section.hideEmptyDisplayControl != undefined ? <span class="branch-0 cbranch-no" title="branch not covered" >section.hideEmptyDisplayControl </span>: false;
+        this.isDataAvailable = true;
+&nbsp;
+        this.id = getId(this, $filter);
+    };
+&nbsp;
+    Bahmni.Common.DisplayControl.Dashboard.Section.create = function (section, $filter) {
+        return new Bahmni.Common.DisplayControl.Dashboard.Section(section, $filter);
+    };
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

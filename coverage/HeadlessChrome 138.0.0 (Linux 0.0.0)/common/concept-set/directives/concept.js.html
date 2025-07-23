@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for common/concept-set/directives/concept.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">common/concept-set/directives/</a> concept.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.04% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>5/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.09% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.14% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>5/70</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.common.conceptSet')
+    .directive('concept', ['RecursionHelper', 'spinner', '$filter', 'messagingService', '$rootScope', '$translate',
+        function (RecursionHelper, spinner, $filter, messagingService, $rootScope, $translate) {
+            var link = <span class="fstat-no" title="function not covered" >function (scope) {</span>
+<span class="cstat-no" title="statement not covered" >                var hideAbnormalbuttonConfig = scope.observation &amp;&amp; scope.observation.conceptUIConfig &amp;&amp; scope.observation.conceptUIConfig['hideAbnormalButton'];</span>
+<span class="cstat-no" title="statement not covered" >                scope.now = moment().format("YYYY-MM-DD hh:mm:ss");</span>
+<span class="cstat-no" title="statement not covered" >                scope.showTitle = scope.showTitle === undefined ? true : scope.showTitle;</span>
+<span class="cstat-no" title="statement not covered" >                scope.hideAbnormalButton = hideAbnormalbuttonConfig == undefined ? scope.hideAbnormalButton : hideAbnormalbuttonConfig;</span>
+<span class="cstat-no" title="statement not covered" >                scope.cloneNew = <span class="fstat-no" title="function not covered" >function (observation, parentObservation) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    observation.showAddMoreButton = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                        return false;</span>
+                    };
+<span class="cstat-no" title="statement not covered" >                    var newObs = observation.cloneNew();</span>
+<span class="cstat-no" title="statement not covered" >                    newObs.scrollToElement = true;</span>
+<span class="cstat-no" title="statement not covered" >                    var index = parentObservation.groupMembers.indexOf(observation);</span>
+<span class="cstat-no" title="statement not covered" >                    parentObservation.groupMembers.splice(index + 1, 0, newObs);</span>
+<span class="cstat-no" title="statement not covered" >                    messagingService.showMessage("info", $translate.instant("NEW_KEY") + " " + observation.label + " " + $translate.instant("SECTION_ADDED_KEY"));</span>
+<span class="cstat-no" title="statement not covered" >                    scope.$root.$broadcast("event:addMore", newObs);</span>
+                };
+<span class="cstat-no" title="statement not covered" >                scope.removeClonedObs = <span class="fstat-no" title="function not covered" >function (observation, parentObservation) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    observation.voided = true;</span>
+<span class="cstat-no" title="statement not covered" >                    var lastObservationByLabel = _.findLast(parentObservation.groupMembers, <span class="fstat-no" title="function not covered" >function (groupMember) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        return groupMember.label === observation.label &amp;&amp; !groupMember.voided;</span>
+                    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    lastObservationByLabel.showAddMoreButton = <span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >return true; </span>};</span>
+<span class="cstat-no" title="statement not covered" >                    observation.hidden = true;</span>
+                };
+<span class="cstat-no" title="statement not covered" >                scope.isClone = <span class="fstat-no" title="function not covered" >function (observation, parentObservation) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (parentObservation &amp;&amp; parentObservation.groupMembers) {</span>
+<span class="cstat-no" title="statement not covered" >                        var index = parentObservation.groupMembers.indexOf(observation);</span>
+<span class="cstat-no" title="statement not covered" >                        return (index &gt; 0) ? parentObservation.groupMembers[index].label == parentObservation.groupMembers[index - 1].label : false;</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return false;</span>
+                };
+<span class="cstat-no" title="statement not covered" >                scope.isRemoveValid = <span class="fstat-no" title="function not covered" >function (observation) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (observation.getControlType() == 'image') {</span>
+<span class="cstat-no" title="statement not covered" >                        return !observation.value;</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return true;</span>
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                scope.getStringValue = <span class="fstat-no" title="function not covered" >function (observations) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    return observations.map(<span class="fstat-no" title="function not covered" >function (observation) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        return observation.value + ' (' + $filter('bahmniDate')(observation.date) + ")";</span>
+                    }).join(", ");
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                scope.toggleSection = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    scope.collapse = !scope.collapse;</span>
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                scope.isCollapsibleSet = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    return scope.showTitle == true;</span>
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                scope.hasPDFAsValue = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    return scope.observation.value &amp;&amp; (scope.observation.value.indexOf(".pdf") &gt; 0);</span>
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                scope.$watch('collapseInnerSections', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    scope.collapse = scope.collapseInnerSections &amp;&amp; scope.collapseInnerSections.value;</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                scope.handleUpdate = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    scope.$root.$broadcast("event:observationUpdated-" + scope.conceptSetName, scope.observation.concept.name, scope.rootObservation);</span>
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                scope.update = <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (scope.getBooleanResult(scope.observation.isObservationNode)) {</span>
+<span class="cstat-no" title="statement not covered" >                        scope.observation.primaryObs.value = value;</span>
+                    } else <span class="cstat-no" title="statement not covered" >if (scope.getBooleanResult(scope.observation.isFormElement())) {</span>
+<span class="cstat-no" title="statement not covered" >                        scope.observation.value = value;</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    scope.handleUpdate();</span>
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                scope.getBooleanResult = <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    return !!value;</span>
+                };
+<span class="cstat-no" title="statement not covered" >                scope.translatedLabel = <span class="fstat-no" title="function not covered" >function (observation) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (observation &amp;&amp; observation.concept) {</span>
+<span class="cstat-no" title="statement not covered" >                        var currentLocale = $rootScope.currentUser.userProperties.defaultLocale;</span>
+<span class="cstat-no" title="statement not covered" >                        var conceptNames = observation.concept.names ? observation.concept.names : [];</span>
+<span class="cstat-no" title="statement not covered" >                        var shortName = conceptNames.find(<span class="fstat-no" title="function not covered" >function (cn) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return cn.locale === currentLocale &amp;&amp; cn.conceptNameType === "SHORT";</span>
+                        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        if (shortName) {</span>
+<span class="cstat-no" title="statement not covered" >                            return shortName.name;</span>
+                        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        var fsName = conceptNames.find(<span class="fstat-no" title="function not covered" >function (cn) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return cn.locale === currentLocale &amp;&amp; cn.conceptNameType === "FULLY_SPECIFIED";</span>
+                        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        if (fsName) {</span>
+<span class="cstat-no" title="statement not covered" >                            return fsName.name;</span>
+                        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        return observation.concept.shortName || observation.concept.name;</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    if (observation) {</span>
+<span class="cstat-no" title="statement not covered" >                        return observation.label;</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return "UNKNOWN_OBSERVATION_CONCEPT";</span>
+                };
+            };
+&nbsp;
+            var compile = function (element) {
+                return RecursionHelper.compile(element, link);
+            };
+&nbsp;
+            return {
+                restrict: 'E',
+                compile: compile,
+                scope: {
+                    conceptSetName: "=",
+                    observation: "=",
+                    atLeastOneValueIsSet: "=",
+                    showTitle: "=",
+                    conceptSetRequired: "=",
+                    rootObservation: "=",
+                    patient: "=",
+                    collapseInnerSections: "=",
+                    rootConcept: "&amp;",
+                    hideAbnormalButton: "="
+                },
+                templateUrl: '../common/concept-set/views/observation.html'
+            };
+        }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

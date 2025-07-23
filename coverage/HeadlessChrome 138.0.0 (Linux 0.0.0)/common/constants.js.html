@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for common/constants.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">common/</a> constants.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>22/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76.92% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>22/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var Bahmni = Bahmni || {};
+Bahmni.Common = Bahmni.Common || {};
+&nbsp;
+(function () {
+    var hostUrl = localStorage.getItem('host') ? (<span class="branch-0 cbranch-no" title="branch not covered" >"https://" + localStorage.getItem('host'))</span> : "";
+    var rootDir = localStorage.getItem('rootDir') || "";
+    var RESTWS = hostUrl + "/openmrs/ws/rest";
+    var RESTWS_V1 = hostUrl + "/openmrs/ws/rest/v1";
+    var BAHMNI_CORE = RESTWS_V1 + "/bahmnicore";
+    var BAHMNI_COMMONS = RESTWS_V1 + "/bahmni";
+    var EMRAPI = RESTWS + "/emrapi";
+    var BACTERIOLOGY = RESTWS_V1;
+    var BASE_URL = hostUrl + "/bahmni_config/openmrs/apps/";
+    var CUSTOM_URL = hostUrl + "/implementation_config/openmrs/apps/";
+    var IE_APPS_API = RESTWS_V1 + "/bahmniie";
+    var IPD = RESTWS_V1 + "/ipd";
+    var FHIR_BASE_URL = hostUrl + "/openmrs/ws/fhir2/R4";
+&nbsp;
+    var serverErrorMessages = [
+        {
+            serverMessage: "Cannot have more than one active order for the same orderable and care setting at same time",
+            clientMessage: "One or more drugs you are trying to order are already active. Please change the start date of the conflicting drug or remove them from the new prescription."
+        },
+        {
+            serverMessage: "[Order.cannot.have.more.than.one]",
+            clientMessage: "One or more drugs you are trying to order are already active. Please change the start date of the conflicting drug or remove them from the new prescription."
+        }
+    ];
+&nbsp;
+    var representation = "custom:(uuid,name,names,conceptClass," +
+        "setMembers:(uuid,name,names,conceptClass," +
+        "setMembers:(uuid,name,names,conceptClass," +
+        "setMembers:(uuid,name,names,conceptClass))))";
+&nbsp;
+    var unAuthenticatedReferenceDataMap = {
+        "/openmrs/ws/rest/v1/location?tags=Login+Location&amp;s=byTags&amp;v=default": "LoginLocations",
+        "/openmrs/ws/rest/v1/bahmnicore/sql/globalproperty?property=locale.allowed.list": "LocaleList"
+    };
+&nbsp;
+    var authenticatedReferenceDataMap = {
+        "/openmrs/ws/rest/v1/idgen/identifiertype": "IdentifierTypes",
+        "/openmrs/module/addresshierarchy/ajax/getOrderedAddressHierarchyLevels.form": "AddressHierarchyLevels",
+        "/openmrs/ws/rest/v1/bahmnicore/sql/globalproperty?property=mrs.genders": "Genders",
+        "/openmrs/ws/rest/v1/bahmnicore/sql/globalproperty?property=bahmni.encountersession.duration": "encounterSessionDuration",
+        "/openmrs/ws/rest/v1/bahmnicore/sql/globalproperty?property=bahmni.relationshipTypeMap": "RelationshipTypeMap",
+        "/openmrs/ws/rest/v1/bahmnicore/config/bahmniencounter?callerContext=REGISTRATION_CONCEPTS": "RegistrationConcepts",
+        "/openmrs/ws/rest/v1/relationshiptype?v=custom:(aIsToB,bIsToA,uuid)": "RelationshipType",
+        "/openmrs/ws/rest/v1/personattributetype?v=custom:(uuid,name,sortWeight,description,format,concept)": "PersonAttributeType",
+        "/openmrs/ws/rest/v1/entitymapping?mappingType=loginlocation_visittype&amp;s=byEntityAndMappingType": "LoginLocationToVisitTypeMapping",
+        "/openmrs/ws/rest/v1/bahmnicore/config/patient": "PatientConfig",
+        "/openmrs/ws/rest/v1/concept?s=byFullySpecifiedName&amp;name=Consultation+Note&amp;v=custom:(uuid,name,answers)": "ConsultationNote",
+        "/openmrs/ws/rest/v1/concept?s=byFullySpecifiedName&amp;name=Lab+Order+Notes&amp;v=custom:(uuid,name)": "LabOrderNotes",
+        "/openmrs/ws/rest/v1/concept?s=byFullySpecifiedName&amp;name=Impression&amp;v=custom:(uuid,name)": "RadiologyImpressionConfig",
+        "/openmrs/ws/rest/v1/concept?s=byFullySpecifiedName&amp;name=All_Tests_and_Panels&amp;v=custom:(uuid,name:(uuid,name),setMembers:(uuid,name:(uuid,name)))": "AllTestsAndPanelsConcept",
+        "/openmrs/ws/rest/v1/concept?s=byFullySpecifiedName&amp;name=Dosage+Frequency&amp;v=custom:(uuid,name,answers)": "DosageFrequencyConfig",
+        "/openmrs/ws/rest/v1/concept?s=byFullySpecifiedName&amp;name=Dosage+Instructions&amp;v=custom:(uuid,name,answers)": "DosageInstructionConfig",
+        "/openmrs/ws/rest/v1/bahmnicore/sql/globalproperty?property=bahmni.encounterType.default": "DefaultEncounterType",
+        "/openmrs/ws/rest/v1/concept?s=byFullySpecifiedName&amp;name=Stopped+Order+Reason&amp;v=custom:(uuid,name,answers)": "StoppedOrderReasonConfig",
+        "/openmrs/ws/rest/v1/ordertype": "OrderType",
+        "/openmrs/ws/rest/v1/bahmnicore/config/drugOrders": "DrugOrderConfig",
+        "/openmrs/ws/rest/v1/bahmnicore/sql/globalproperty?property=drugOrder.drugOther": "NonCodedDrugConcept"
+    };
+&nbsp;
+    authenticatedReferenceDataMap["/openmrs/ws/rest/v1/entitymapping?mappingType=location_encountertype&amp;s=byEntityAndMappingType&amp;entityUuid=" + (localStorage.getItem("LoginInformation") ? <span class="branch-0 cbranch-no" title="branch not covered" >JSON.parse(localStorage.getItem("LoginInformation")).currentLocation.uuid </span>: "")] = "LoginLocationToEncounterTypeMapping";
+&nbsp;
+    Bahmni.Common.Constants = {
+        hostURL: hostUrl,
+        dateFormat: "dd/mm/yyyy",
+        dateDisplayFormat: "DD-MMM-YYYY",
+        timeDisplayFormat: "hh:mm",
+        clientTimeDisplayFormat: "h:mm a",
+        clientDateDisplayFormat: "DD MMM YYYY",
+        emrapiDiagnosisUrl: EMRAPI + "/diagnosis",
+        bahmniDiagnosisUrl: BAHMNI_CORE + "/diagnosis/search",
+        emrapiDiagnosisLimit: Bahmni.Common.Constants &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >Bahmni.Common.Constants.emrapiDiagnosisLimit </span>|| 20,
+        bahmniDeleteDiagnosisUrl: BAHMNI_CORE + "/diagnosis/delete",
+        diseaseTemplateUrl: BAHMNI_CORE + "/diseaseTemplates",
+        AllDiseaseTemplateUrl: BAHMNI_CORE + "/diseaseTemplate",
+        emrapiConceptUrl: EMRAPI + "/concept",
+        bahmniapiConceptUrl: BAHMNI_COMMONS + "/terminologies/concepts",
+        encounterConfigurationUrl: BAHMNI_CORE + "/config/bahmniencounter",
+        patientConfigurationUrl: BAHMNI_CORE + "/config/patient",
+        drugOrderConfigurationUrl: BAHMNI_CORE + "/config/drugOrders",
+        emrEncounterUrl: EMRAPI + "/encounter",
+        encounterUrl: RESTWS_V1 + "/encounter",
+        cdssUrl: RESTWS_V1 + "/cdss",
+        fhirExportPrivilege: "Export Patient Data",
+        plainFhirExportPrivilege: "Export Non Anonymised Patient Data",
+        fhirExportUrl: RESTWS_V1 + "/fhirexport",
+        fhirTasks: FHIR_BASE_URL + "/Task",
+        fhirMedicationsUrl: FHIR_BASE_URL + "/Medication",
+        locationUrl: RESTWS_V1 + "/location",
+        bahmniVisitLocationUrl: BAHMNI_CORE + "/visitLocation",
+        bahmniFacilityLocationUrl: BAHMNI_CORE + "/facilityLocation",
+        bahmniOrderUrl: BAHMNI_CORE + "/orders",
+        bahmniDrugOrderUrl: BAHMNI_CORE + "/drugOrders",
+        bahmniDispositionByVisitUrl: BAHMNI_CORE + "/disposition/visitWithLocale",
+        bahmniDispositionByPatientUrl: BAHMNI_CORE + "/disposition/patientWithLocale",
+        bahmniSearchUrl: BAHMNI_CORE + "/search",
+        bahmniCommonsSearchUrl: BAHMNI_COMMONS + "/search",
+        bahmniLabOrderResultsUrl: BAHMNI_CORE + "/labOrderResults",
+        bahmniEncounterUrl: BAHMNI_CORE + "/bahmniencounter",
+        conceptUrl: RESTWS_V1 + "/concept",
+        bahmniConceptAnswerUrl: RESTWS_V1 + "/bahmniconceptanswer",
+        conceptSearchByFullNameUrl: RESTWS_V1 + "/concept?s=byFullySpecifiedName",
+        visitUrl: RESTWS_V1 + "/visit",
+        endVisitUrl: BAHMNI_CORE + "/visit/endVisit",
+        endVisitAndCreateEncounterUrl: BAHMNI_CORE + "/visit/endVisitAndCreateEncounter",
+        visitTypeUrl: RESTWS_V1 + "/visittype",
+        patientImageUrlByPatientUuid: RESTWS_V1 + "/patientImage?patientUuid=",
+        labResultUploadedFileNameUrl: "/uploaded_results/",
+        visitSummaryUrl: BAHMNI_CORE + "/visit/summary",
+        encounterModifierUrl: BAHMNI_CORE + "/bahmniencountermodifier",
+        openmrsUrl: hostUrl + "/openmrs",
+        loggingUrl: hostUrl + "/log/",
+        idgenConfigurationURL: RESTWS_V1 + "/idgen/identifiertype",
+        bahmniRESTBaseURL: BAHMNI_CORE + "",
+        observationsUrl: BAHMNI_CORE + "/observations",
+        obsRelationshipUrl: BAHMNI_CORE + "/obsrelationships",
+        encounterImportUrl: BAHMNI_CORE + "/admin/upload/encounter",
+        form2encounterImportUrl: BAHMNI_CORE + "/admin/upload/form2encounter",
+        programImportUrl: BAHMNI_CORE + "/admin/upload/program",
+        conceptImportUrl: BAHMNI_CORE + "/admin/upload/concept",
+        conceptSetImportUrl: BAHMNI_CORE + "/admin/upload/conceptset",
+        drugImportUrl: BAHMNI_CORE + "/admin/upload/drug",
+        labResultsImportUrl: BAHMNI_CORE + "/admin/upload/labResults",
+        referenceTermsImportUrl: BAHMNI_CORE + "/admin/upload/referenceterms",
+        updateReferenceTermsImportUrl: BAHMNI_CORE + "/admin/upload/referenceterms/new",
+        relationshipImportUrl: BAHMNI_CORE + "/admin/upload/relationship",
+        conceptSetExportUrl: BAHMNI_CORE + "/admin/export/conceptset?conceptName=:conceptName",
+        patientImportUrl: BAHMNI_CORE + "/admin/upload/patient",
+        adminImportStatusUrl: BAHMNI_CORE + "/admin/upload/status",
+        programUrl: RESTWS_V1 + "/program",
+        programEnrollPatientUrl: RESTWS_V1 + "/bahmniprogramenrollment",
+        programStateDeletionUrl: RESTWS_V1 + "/programenrollment",
+        programEnrollmentDefaultInformation: "default",
+        programEnrollmentFullInformation: "full",
+        programAttributeTypes: RESTWS_V1 + "/programattributetype",
+        relationshipTypesUrl: RESTWS_V1 + "/relationshiptype",
+        personAttributeTypeUrl: RESTWS_V1 + "/personattributetype",
+        diseaseSummaryPivotUrl: BAHMNI_CORE + "/diseaseSummaryData",
+        allTestsAndPanelsConceptName: 'All_Tests_and_Panels',
+        dosageFrequencyConceptName: 'Dosage Frequency',
+        dosageInstructionConceptName: 'Dosage Instructions',
+        stoppedOrderReasonConceptName: 'Stopped Order Reason',
+        consultationNoteConceptName: 'Consultation Note',
+        diagnosisConceptSet: 'Diagnosis Concept Set',
+        radiologyOrderType: 'Radiology Order',
+        radiologyResultConceptName: "Radiology Result",
+        investigationEncounterType: "INVESTIGATION",
+        validationNotesEncounterType: "VALIDATION NOTES",
+        labOrderNotesConcept: "Lab Order Notes",
+        impressionConcept: "Impression",
+        qualifiedByRelationshipType: "qualified-by",
+        dispositionConcept: "Disposition",
+        dispositionGroupConcept: "Disposition Set",
+        dispositionNoteConcept: "Disposition Note",
+        ruledOutDiagnosisConceptName: 'Ruled Out Diagnosis',
+        emrapiConceptMappingSource: "org.openmrs.module.emrapi",
+        abbreviationConceptMappingSource: "Abbreviation",
+        includeAllObservations: false,
+        openmrsObsUrl: RESTWS_V1 + "/obs",
+        openmrsObsRepresentation: "custom:(uuid,obsDatetime,value:(uuid,name:(uuid,name)))",
+        admissionCode: 'ADMIT',
+        dischargeCode: 'DISCHARGE',
+        transferCode: 'TRANSFER',
+        undoDischargeCode: 'UNDO_DISCHARGE',
+        vitalsConceptName: "Vitals",
+        heightConceptName: "HEIGHT",
+        weightConceptName: "WEIGHT",
+        bmiConceptName: "BMI", // TODO : shruthi : revove this when this logic moved to server side
+        bmiStatusConceptName: "BMI STATUS", // TODO : shruthi : revove this when this logic moved to server side
+        abnormalObservationConceptName: "IS_ABNORMAL",
+        documentsPath: '/document_images',
+        documentsConceptName: 'Document',
+        miscConceptClassName: 'Misc',
+        abnormalConceptClassName: 'Abnormal',
+        unknownConceptClassName: 'Unknown',
+        durationConceptClassName: 'Duration',
+        conceptDetailsClassName: 'Concept Details',
+        admissionEncounterTypeName: 'ADMISSION',
+        dischargeEncounterTypeName: 'DISCHARGE',
+        imageClassName: 'Image',
+        videoClassName: 'Video',
+        locationCookieName: 'bahmni.user.location',
+        retrospectiveEntryEncounterDateCookieName: 'bahmni.clinical.retrospectiveEncounterDate',
+        JSESSIONID: "JSESSIONID",
+        rootScopeRetrospectiveEntry: 'retrospectiveEntry.encounterDate',
+        patientFileConceptName: 'Patient file',
+        serverErrorMessages: serverErrorMessages,
+        currentUser: 'bahmni.user',
+        retrospectivePrivilege: 'app:clinical:retrospective',
+        locationPickerPrivilege: 'app:clinical:locationpicker',
+        onBehalfOfPrivilege: 'app:clinical:onbehalf',
+        nutritionalConceptName: 'Nutritional Values',
+        messageForNoObservation: "NO_OBSERVATIONS_CAPTURED",
+        messageForNoDisposition: "NO_DISPOSTIONS_AVAILABLE_MESSAGE_KEY",
+        messageForNoFulfillment: "NO_FULFILMENT_MESSAGE",
+        reportsUrl: "/bahmnireports",
+        uploadReportTemplateUrl: "/bahmnireports/upload",
+        ruledOutdiagnosisStatus: "Ruled Out Diagnosis",
+        registartionConsultationPrivilege: 'app:common:registration_consultation_link',
+        manageIdentifierSequencePrivilege: "Manage Identifier Sequence",
+        closeVisitPrivilege: 'app:common:closeVisit',
+        deleteDiagnosisPrivilege: 'app:clinical:deleteDiagnosis',
+        viewPatientsPrivilege: 'View Patients',
+        editPatientsPrivilege: 'Edit Patients',
+        addVisitsPrivilege: 'Add Visits',
+        deleteVisitsPrivilege: 'Delete Visits',
+        grantProviderAccess: "app:clinical:grantProviderAccess",
+        grantProviderAccessDataCookieName: "app.clinical.grantProviderAccessData",
+        globalPropertyUrl: BAHMNI_CORE + "/sql/globalproperty",
+        passwordPolicyUrl: BAHMNI_CORE + "/globalProperty/passwordPolicyProperties",
+        fulfillmentConfiguration: "fulfillment",
+        fulfillmentFormSuffix: " Fulfillment Form",
+        noNavigationLinksMessage: "NO_NAVIGATION_LINKS_AVAILABLE_MESSAGE",
+        conceptSetRepresentationForOrderFulfillmentConfig: representation,
+        entityMappingUrl: RESTWS_V1 + "/entitymapping",
+        encounterTypeUrl: RESTWS_V1 + "/encountertype",
+        defaultExtensionName: "default",
+        orderSetMemberAttributeTypeUrl: RESTWS_V1 + "/ordersetmemberattributetype",
+        orderSetUrl: RESTWS_V1 + "/bahmniorderset",
+        primaryOrderSetMemberAttributeTypeName: "Primary",
+        bahmniBacteriologyResultsUrl: BACTERIOLOGY + "/specimen",
+        bedFromVisit: RESTWS_V1 + "/beds",
+        sendViaEmailUrl: RESTWS_V1 + "/patient/{{patientUuid}}/send/email",
+        ordersUrl: RESTWS_V1 + "/order",
+        formDataUrl: RESTWS_V1 + "/obs",
+        providerUrl: RESTWS_V1 + "/provider",
+        providerAttributeUrl: RESTWS_V1 + "/provider/{{providerUuid}}/attribute",
+        drugUrl: RESTWS_V1 + "/drug",
+        orderTypeUrl: RESTWS_V1 + "/ordertype",
+        userUrl: RESTWS_V1 + "/user",
+        passwordUrl: RESTWS_V1 + "/password",
+        formUrl: RESTWS_V1 + "/form",
+        allFormsUrl: RESTWS_V1 + "/bahmniie/form/allForms",
+        medicationSchedulesForOrders: IPD + "/schedule/type/medication",
+        patientAllergiesURL: FHIR_BASE_URL + "/AllergyIntolerance?patient={{patientUuid}}&amp;_summary=data",
+        latestPublishedForms: RESTWS_V1 + "/bahmniie/form/latestPublishedForms",
+        formTranslationsUrl: RESTWS_V1 + "/bahmniie/form/translations",
+        sqlUrl: BAHMNI_CORE + "/sql",
+        patientAttributeDateFieldFormat: "org.openmrs.util.AttributableDate",
+        platform: "user.platform",
+        RESTWS_V1: RESTWS_V1,
+        baseUrl: BASE_URL,
+        customUrl: CUSTOM_URL,
+        faviconUrl: hostUrl + "/bahmni/favicon.ico",
+        platformType: {
+            other: 'other'
+        },
+        numericDataType: "Numeric",
+        encryptionType: {
+            SHA3: 'SHA3'
+        },
+        LoginInformation: 'LoginInformation',
+        // orderSetSpecialUnits:["mg/kg","mg/m2"],
+        ServerDateTimeFormat: 'YYYY-MM-DDTHH:mm:ssZZ',
+        calculateDose: BAHMNI_CORE + "/calculateDose",
+        unAuthenticatedReferenceDataMap: unAuthenticatedReferenceDataMap,
+        authenticatedReferenceDataMap: authenticatedReferenceDataMap,
+        rootDir: rootDir,
+        dischargeUrl: BAHMNI_CORE + "/discharge",
+        uuidRegex: "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
+        eventlogFilterUrl: hostUrl + "/openmrs/ws/rest/v1/eventlog/filter",
+        bahmniConnectMetaDataDb: "metaData",
+        serverDateTimeUrl: "/cgi-bin/systemdate",
+        loginText: "/bahmni_config/openmrs/apps/home/whiteLabel.json",
+        auditLogUrl: RESTWS_V1 + "/auditlog",
+        appointmentServiceUrl: RESTWS_V1 + "/appointmentService",
+        conditionUrl: EMRAPI + '/condition',
+        conditionHistoryUrl: EMRAPI + '/conditionhistory',
+        followUpConditionConcept: 'Follow-up Condition',
+        localeLangs: "/bahmni_config/openmrs/apps/home/locale_languages.json",
+        privilegeRequiredErrorMessage: "PRIVILEGE_REQUIRED",
+        patientFormsUrl: BAHMNI_CORE + "/patient/{patientUuid}/forms",
+        defaultPossibleRelativeSearchLimit: 10,
+        formBuilderDisplayControlType: "formsV2",
+        formBuilderType: "v2",
+        formsV2ReactDisplayControlType: "formsV2React",
+        formBuilderTranslationApi: IE_APPS_API + '/form/translate',
+        disposition: "DISPOSITION",
+        registration: "REGISTRATION",
+        clinical: "CLINICAL",
+        diagnosis: "DIAGNOSIS",
+        ot: "OT",
+        patientAttribute: "PATIENT_ATTRIBUTE",
+        program: "PROGRAM",
+        visitType: "VISIT_TYPE",
+        bedmanagement: "BEDMANAGEMENT",
+        bedmanagementDisposition: "BEDMANAGEMENT_DISPOSITION",
+        loginConfig: "/bahmni_config/openmrs/apps/home/login_config.json",
+        visit: "VISIT",
+        defaultImageUploadSize: 500000, // Default patient profile photo size
+        maxImageUploadSize: 9000000, // to ensure, extreme max size and prevent choking up server capacity (max size is 9MB)
+        adhocTeleconsultationLinkServiceUrl: RESTWS_V1 + "/adhocTeleconsultation/generateAdhocTeleconsultationLink"
+    };
+})();
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

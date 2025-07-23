@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ot/controller/calendarViewCancelAppointmentController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">ot/controller/</a> calendarViewCancelAppointmentController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.05% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>37/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">57.14% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.05% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>37/43</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.ot').controller('calendarViewCancelAppointmentController', [
+    '$scope', '$translate', '$q', 'ngDialog', 'surgicalAppointmentService', 'messagingService', 'surgicalAppointmentHelper',
+    function ($scope, $translate, $q, ngDialog, surgicalAppointmentService, messagingService, surgicalAppointmentHelper) {
+        var ngDialogSurgicalAppointment = $scope.ngDialogData.surgicalAppointment;
+        var attributes = surgicalAppointmentHelper.getAppointmentAttributes(ngDialogSurgicalAppointment);
+        $scope.appointment = {
+            estTimeHours: attributes.estTimeHours,
+            estTimeMinutes: attributes.estTimeMinutes,
+            patient: surgicalAppointmentHelper.getPatientDisplayLabel(ngDialogSurgicalAppointment.patient.display),
+            notes: ngDialogSurgicalAppointment.notes,
+            status: ngDialogSurgicalAppointment.status
+        };
+&nbsp;
+        $scope.confirmCancelAppointment = function () {
+            var surgicalAppointment = {};
+            surgicalAppointment.id = $scope.ngDialogData.surgicalAppointment.id;
+            surgicalAppointment.uuid = $scope.ngDialogData.surgicalAppointment.uuid;
+            surgicalAppointment.notes = $scope.appointment.notes;
+            surgicalAppointment.status = $scope.appointment.status;
+            surgicalAppointment.surgicalBlock = {uuid: $scope.ngDialogData.surgicalBlock.uuid};
+            surgicalAppointment.patient = {uuid: ngDialogSurgicalAppointment.patient.uuid};
+            surgicalAppointment.sortWeight = null;
+            $q.all([surgicalAppointmentService.updateSurgicalAppointment(surgicalAppointment), updateSortWeightOfSurgicalAppointments()]).then(function (response) {
+                ngDialogSurgicalAppointment.patient = response[0].data.patient;
+                ngDialogSurgicalAppointment.status = response[0].data.status;
+                ngDialogSurgicalAppointment.notes = response[0].data.notes;
+                ngDialogSurgicalAppointment.sortWeight = response[0].data.sortWeight;
+                var message = '';
+                if (ngDialogSurgicalAppointment.status === Bahmni.OT.Constants.postponed) {
+                    message = $translate.instant("OT_SURGICAL_APPOINTMENT_POSTPONED_MESSAGE");
+                } else <span class="missing-if-branch" title="else path not taken" >E</span>if (ngDialogSurgicalAppointment.status === Bahmni.OT.Constants.cancelled) {
+                    message = $translate.instant("OT_SURGICAL_APPOINTMENT_CANCELLED_MESSAGE");
+                }
+                message = message + surgicalAppointmentHelper.getPatientDisplayLabel($scope.ngDialogData.surgicalAppointment.patient.display) + ' - ' + $scope.ngDialogData.surgicalBlock.location.name;
+                messagingService.showMessage('info', message);
+                ngDialog.close();
+            });
+        };
+&nbsp;
+        var updateSortWeightOfSurgicalAppointments = function () {
+            var surgicalBlock = _.cloneDeep($scope.ngDialogData.surgicalBlock);
+            var surgicalAppointments = _.filter(surgicalBlock.surgicalAppointments, function (appointment) {
+                return appointment.uuid !== $scope.ngDialogData.surgicalAppointment.uuid &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >appointment.status !== 'POSTPONED' </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >appointment.status !== 'CANCELLED';</span>
+            });
+            surgicalBlock.surgicalAppointments = _.map(surgicalAppointments, <span class="fstat-no" title="function not covered" >function (appointment, index) {</span>
+<span class="cstat-no" title="statement not covered" >                appointment.sortWeight = index;</span>
+<span class="cstat-no" title="statement not covered" >                return appointment;</span>
+            });
+            surgicalBlock.provider = {uuid: surgicalBlock.provider.uuid};
+            surgicalBlock.location = {uuid: surgicalBlock.location.uuid};
+            surgicalBlock.surgicalAppointments = _.map(surgicalBlock.surgicalAppointments, <span class="fstat-no" title="function not covered" >function (appointment) {</span>
+<span class="cstat-no" title="statement not covered" >                appointment.patient = {uuid: appointment.patient.uuid};</span>
+<span class="cstat-no" title="statement not covered" >                appointment.surgicalAppointmentAttributes = _.values(appointment.surgicalAppointmentAttributes).filter(<span class="fstat-no" title="function not covered" >function (attribute) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    return !_.isUndefined(attribute.value);</span>
+                });
+<span class="cstat-no" title="statement not covered" >                return _.omit(appointment, ['derivedAttributes', 'surgicalBlock', 'bedNumber', 'bedLocation']);</span>
+            });
+&nbsp;
+            return surgicalAppointmentService.updateSurgicalBlock(surgicalBlock);
+        };
+&nbsp;
+        $scope.closeDialog = function () {
+            ngDialog.close();
+        };
+    }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

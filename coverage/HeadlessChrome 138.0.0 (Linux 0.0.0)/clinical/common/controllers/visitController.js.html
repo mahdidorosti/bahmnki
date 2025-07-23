@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for clinical/common/controllers/visitController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">clinical/common/controllers/</a> visitController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.38% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>71/133</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.58% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>24/76</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.86% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>15/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.38% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>71/133</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.clinical')
+    .controller('VisitController', ['$scope', '$state', '$rootScope', '$q', 'encounterService', '$window', 'clinicalAppConfigService', 'configurations', 'visitSummary', '$timeout', 'printer', 'visitConfig', 'visitHistory', '$stateParams', 'locationService', 'visitService', 'appService', 'diagnosisService', 'observationsService', 'allergyService', 'auditLogService', 'sessionService', '$location',
+        function ($scope, $state, $rootScope, $q, encounterService, $window, clinicalAppConfigService, configurations, visitSummary, $timeout, printer, visitConfig, visitHistory, $stateParams, locationService, visitService, appService, diagnosisService, observationsService, allergyService, auditLogService, sessionService, $location) {
+            function handleLogoutShortcut (event) {
+                <span class="missing-if-branch" title="else path not taken" >E</span>if ((event.metaKey || <span class="branch-1 cbranch-no" title="branch not covered" >event.ctrlKey)</span> &amp;&amp; event.key === $rootScope.quickLogoutComboKey) {
+                    $scope.ipdDashboard.hostApi.onLogOut();
+                }
+            }
+            function cleanup () {
+                $window.removeEventListener('keydown', handleLogoutShortcut);
+            }
+            $window.addEventListener('keydown', handleLogoutShortcut);
+            $scope.$on('$destroy', cleanup);
+            var encounterTypeUuid = configurations.encounterConfig().getPatientDocumentEncounterTypeUuid();
+            $scope.documentsPromise = encounterService.getEncountersForEncounterType($scope.patient.uuid, encounterTypeUuid).then(<span class="fstat-no" title="function not covered" >function (response) {</span>
+<span class="cstat-no" title="statement not covered" >                return new Bahmni.Clinical.PatientFileObservationsMapper().map(response.data.results);</span>
+            });
+            $scope.currentVisitUrl = $state.current.views['dashboard-content'].templateUrl ||
+<span class="branch-1 cbranch-no" title="branch not covered" >                $state.current.views['print-content'].templateUrl;</span>
+            var showProviderInfo = appService.getAppDescriptor().getConfigValue('showProviderInfoinVisits');
+            $scope.showProviderInfo = showProviderInfo !== false ? true : <span class="branch-1 cbranch-no" title="branch not covered" >showProviderInfo;</span>
+            $scope.visitHistory = visitHistory; // required as this visit needs to be overridden when viewing past visits
+            $scope.visitSummary = visitSummary;
+            $scope.visitTabConfig = visitConfig;
+            $scope.showTrends = true;
+            $scope.patientUuid = $stateParams.patientUuid;
+            $scope.visitUuid = $stateParams.visitUuid;
+            $scope.isActiveIpdVisit = $scope.visitSummary.visitType === "IPD";
+            $scope.isIpdReadMode = true;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if ($scope.visitSummary.stopDateTime === null) {
+<span class="cstat-no" title="statement not covered" >                $scope.isIpdReadMode = false;</span>
+            }
+            $scope.ipdDashboard = {
+                hostData: {
+                    patient: {uuid: $scope.patientUuid},
+                    visitSummary: $scope.visitSummary,
+                    forDate: new Date().toUTCString(),
+                    provider: $rootScope.currentProvider,
+                    currentUser: $rootScope.currentUser,
+                    visitUuid: $scope.visitUuid,
+                    isReadMode: $scope.isIpdReadMode,
+                    source: $location.search().source
+                },
+                hostApi: {
+                    navigation: {
+                        visitSummary: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                            const visitSummaryUrl = $state.href('patient.dashboard.visit', {visitUuid: $scope.visitUuid});</span>
+<span class="cstat-no" title="statement not covered" >                            $window.open(visitSummaryUrl, '_blank');</span>
+                        }
+                    },
+                    onLogOut: function () {
+                        auditLogService.log(undefined, 'USER_LOGOUT_SUCCESS', undefined, 'MODULE_LABEL_LOGOUT_KEY').then(function () {
+                            sessionService.destroy().then(
+<span class="fstat-no" title="function not covered" >                                function () {</span>
+<span class="cstat-no" title="statement not covered" >                                    $window.location = "../home/index.html#/login";</span>
+                                });
+                        });
+                    },
+                    handleAuditEvent: <span class="fstat-no" title="function not covered" >function (patientUuid, eventType, messageParams, module) {</span>
+<span class="cstat-no" title="statement not covered" >                        return auditLogService.log(patientUuid, eventType, messageParams, module);</span>
+                    }
+                }
+            };
+            var tab = $stateParams.tab;
+            var encounterTypes = visitConfig.currentTab.encounterContext ? <span class="branch-0 cbranch-no" title="branch not covered" >visitConfig.currentTab.encounterContext.filterEncounterTypes </span>: null;
+            visitService.getVisit($scope.visitUuid, 'custom:(uuid,visitType,startDatetime,stopDatetime,encounters:(uuid,encounterDatetime,provider:(display),encounterType:(display)))').then(<span class="fstat-no" title="function not covered" >function (response) {</span>
+<span class="cstat-no" title="statement not covered" >                if (response.data &amp;&amp; response.data.encounters) {</span>
+<span class="cstat-no" title="statement not covered" >                    var encounters = response.data.encounters;</span>
+<span class="cstat-no" title="statement not covered" >                    if (encounterTypes) {</span>
+<span class="cstat-no" title="statement not covered" >                        encounters = encounters.filter(<span class="fstat-no" title="function not covered" >function (enc) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return encounterTypes.includes(enc.encounterType.display);</span>
+                        });
+                    }
+<span class="cstat-no" title="statement not covered" >                    encounters = encounters.sort(<span class="fstat-no" title="function not covered" >function (a, b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        return a.encounterDatetime.localeCompare(b.encounterDatetime);</span>
+                    });
+<span class="cstat-no" title="statement not covered" >                    if (encounters &amp;&amp; encounters.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.providerNames = encounters[0].provider &amp;&amp; encounters[0].provider.display ? encounters[0].provider.display : null;</span>
+                    }
+                }
+            });
+&nbsp;
+            $scope.isNumeric = function (value) {
+                return $.isNumeric(value);
+            };
+&nbsp;
+            $scope.toggle = <span class="fstat-no" title="function not covered" >function (item) {</span>
+<span class="cstat-no" title="statement not covered" >                item.show = !item.show;</span>
+            };
+            $scope.isEmpty = function (notes) {
+                if (notes) {
+                    return notes.trim().length &lt; 2;
+                }
+                return true;
+            };
+            $scope.testResultClass = function (line) {
+                var style = {};
+                <span class="missing-if-branch" title="else path not taken" >E</span>if ($scope.pendingResults(line)) {
+                    style["pending-result"] = true;
+                }
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (line.isSummary) {
+                    style["header"] = true;
+                }
+                return style;
+            };
+&nbsp;
+            $scope.pendingResults = function (line) {
+                return line.isSummary &amp;&amp; !line.hasResults &amp;&amp; line.name !== "";
+            };
+&nbsp;
+            $scope.displayDate = function (date) {
+                return moment(date).format("DD-MMM-YYYY");
+            };
+&nbsp;
+            $scope.$on("event:printVisitTab", <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                var printConfig = $scope.visitTabConfig.currentTab.printing;</span>
+<span class="cstat-no" title="statement not covered" >                var templateUrl = printConfig.templateUrl;</span>
+<span class="cstat-no" title="statement not covered" >                if (templateUrl) {</span>
+<span class="cstat-no" title="statement not covered" >                    var promises = [];</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.diagnosesCodes = "";</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.observationsEntries = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    if (printConfig.observationsConcepts !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >                        var promise = $q.all([diagnosisService.getPatientDiagnosis($stateParams.patientUuid), observationsService.fetch($stateParams.patientUuid, printConfig.observationsConcepts, "latest", null, null, null, null, null)]).then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            const diagnoses = response[0].data;</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.observationsEntries = response[1].data;</span>
+<span class="cstat-no" title="statement not covered" >                            angular.forEach(diagnoses, <span class="fstat-no" title="function not covered" >function (diagnosis) {</span></span>
+<span class="cstat-no" title="statement not covered" >                                if (diagnosis.order === printConfig.printDiagnosis.order &amp;&amp;</span>
+                                    diagnosis.certainty === printConfig.printDiagnosis.certainity) {
+<span class="cstat-no" title="statement not covered" >                                    if ($scope.diagnosesCodes.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                                        $scope.diagnosesCodes += ", ";</span>
+                                    }
+<span class="cstat-no" title="statement not covered" >                                    if (diagnosis.codedAnswer !== null &amp;&amp; diagnosis.codedAnswer.mappings.length !== 0) {</span>
+<span class="cstat-no" title="statement not covered" >                                        $scope.diagnosesCodes += diagnosis.codedAnswer.mappings[0].code + " - " + diagnosis.codedAnswer.name;</span>
+                                    }
+                                    else <span class="cstat-no" title="statement not covered" >if (diagnosis.codedAnswer !== null &amp;&amp; diagnosis.codedAnswer.mappings.length == 0) {</span>
+<span class="cstat-no" title="statement not covered" >                                        $scope.diagnosesCodes += diagnosis.codedAnswer.name;</span>
+                                    }
+                                    else <span class="cstat-no" title="statement not covered" >if (diagnosis.codedAnswer == null &amp;&amp; diagnosis.freeTextAnswer !== null) {</span>
+<span class="cstat-no" title="statement not covered" >                                        $scope.diagnosesCodes += diagnosis.freeTextAnswer;</span>
+                                    }
+                                }
+                            });
+                        });
+<span class="cstat-no" title="statement not covered" >                        promises.push(promise);</span>
+                    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    $scope.allergies = "";</span>
+<span class="cstat-no" title="statement not covered" >                    var allergyPromise = allergyService.fetchAndProcessAllergies($scope.patient.uuid).then(<span class="fstat-no" title="function not covered" >function (allergies) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        $scope.allergies = allergies;</span>
+                    });
+<span class="cstat-no" title="statement not covered" >                    promises.push(allergyPromise);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    Promise.all(promises).then(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                        $scope.additionalInfo = {};</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.additionalInfo.visitSummary = $scope.visitSummary;</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.additionalInfo.currentDate = new Date();</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.additionalInfo.facilityLocation = $rootScope.facilityLocation;</span>
+<span class="cstat-no" title="statement not covered" >                        var tabName = printConfig.header.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, <span class="fstat-no" title="function not covered" >function (match, chr) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return chr.toUpperCase();</span>
+                        }).replace(/^[a-z]/, <span class="fstat-no" title="function not covered" >function (match) {</span>
+<span class="cstat-no" title="statement not covered" >                            return match.toUpperCase();</span>
+                        });
+<span class="cstat-no" title="statement not covered" >                        $scope.pageTitle = $scope.patient.givenName + $scope.patient.familyName + "_" + $scope.patient.identifier + "_" + tabName;</span>
+<span class="cstat-no" title="statement not covered" >                        printer.printFromScope(templateUrl, $scope);</span>
+                    }).catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >                        console.error("Error fetching details for print: ", error);</span>
+                    });
+                } else {
+<span class="cstat-no" title="statement not covered" >                    printer.printFromScope("common/views/visitTabPrint.html", $scope);</span>
+                }
+            });
+&nbsp;
+            $scope.$on("event:clearVisitBoard", <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                $scope.clearBoard = true;</span>
+<span class="cstat-no" title="statement not covered" >                $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $scope.clearBoard = false;</span>
+                });
+            });
+&nbsp;
+            $scope.loadVisit = <span class="fstat-no" title="function not covered" >function (visitUuid) {</span>
+<span class="cstat-no" title="statement not covered" >                $state.go('patient.dashboard.visit', {visitUuid: visitUuid});</span>
+            };
+&nbsp;
+            var getCertificateHeader = function () {
+                $scope.certificateHeader = {};
+                return locationService.getAllByTag("Login Location").then(function (response) {
+                    var locations = response.data.results;
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (locations !== null &amp;&amp; locations.length &gt; 0) {
+                        $scope.certificateHeader.name = locations[0].name;
+                        <span class="missing-if-branch" title="else path not taken" >E</span>if (locations[0].attributes &amp;&amp; locations[0].attributes.length &gt; 0) {
+                            var attributeDisplay = locations[0].attributes[0].display.split(": ");
+                            <span class="missing-if-branch" title="else path not taken" >E</span>if (attributeDisplay[0] === Bahmni.Clinical.Constants.certificateHeader) {
+                                $scope.certificateHeader.address = attributeDisplay[1];
+                            }
+                        }
+                    }
+                });
+            };
+&nbsp;
+            var printOnPrint = function () {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if ($stateParams.print) {
+<span class="cstat-no" title="statement not covered" >                    printer.printFromScope("common/views/visitTabPrint.html", $scope, <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                        window.close();</span>
+                    });
+                }
+            };
+&nbsp;
+            var getTab = function () {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (tab) {
+<span class="cstat-no" title="statement not covered" >                    for (var tabIndex in $scope.visitTabConfig.tabs) {</span>
+<span class="cstat-no" title="statement not covered" >                        if ($scope.visitTabConfig.tabs[tabIndex].title === tab) {</span>
+<span class="cstat-no" title="statement not covered" >                            return $scope.visitTabConfig.tabs[tabIndex];</span>
+                        }
+                    }
+                }
+                return $scope.visitTabConfig.getFirstTab();
+            };
+&nbsp;
+            var init = function () {
+                $scope.visitTabConfig.setVisitUuidsAndPatientUuidToTheSections([$scope.visitUuid], $scope.patientUuid);
+                var tabToOpen = getTab();
+                $scope.visitTabConfig.switchTab(tabToOpen);
+                printOnPrint();
+                $scope.showProviderInfo ? getCertificateHeader() : <span class="branch-1 cbranch-no" title="branch not covered" >null;</span>
+            };
+            init();
+        }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

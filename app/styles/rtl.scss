@@ -1,0 +1,296 @@
+/* RTL Layout Styles for Persian and other RTL languages */
+
+// RTL Variables
+$rtl-languages: 'fa', 'ar', 'he', 'ur';
+
+// Mixins for RTL support
+@mixin rtl-float($direction) {
+  .rtl-layout & {
+    float: if($direction == left, right, left);
+  }
+}
+
+@mixin rtl-margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  .rtl-layout & {
+    margin: $top $left $bottom $right;
+  }
+}
+
+@mixin rtl-padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  .rtl-layout & {
+    padding: $top $left $bottom $right;
+  }
+}
+
+@mixin rtl-text-align($align) {
+  .rtl-layout & {
+    text-align: if($align == left, right, if($align == right, left, $align));
+  }
+}
+
+// Base RTL direction
+.rtl-layout {
+  direction: rtl;
+  text-align: right;
+
+  // Reset text alignment for LTR content within RTL layout
+  .ltr-content {
+    direction: ltr;
+    text-align: left;
+  }
+
+  // Navigation and menu adjustments
+  .navbar-nav {
+    float: right;
+  }
+
+  .navbar-brand {
+    float: right;
+  }
+
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+
+  // Form controls
+  .form-control {
+    text-align: right;
+  }
+
+  .form-group {
+    label {
+      text-align: right;
+    }
+  }
+
+  .checkbox,
+  .radio {
+    text-align: right;
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 0;
+      margin-left: -20px;
+    }
+  }
+
+  // Button alignments
+  .btn-group {
+    direction: rtl;
+  }
+
+  .btn-toolbar {
+    text-align: right;
+  }
+
+  // Table adjustments
+  table {
+    direction: rtl;
+
+    th,
+    td {
+      text-align: right;
+    }
+  }
+
+  // Modal and dialog adjustments
+  .modal-header {
+    text-align: right;
+  }
+
+  .modal-footer {
+    text-align: left;
+
+    .btn {
+      margin-left: 0;
+      margin-right: 5px;
+    }
+  }
+
+  // Panel and card layouts
+  .panel-heading,
+  .panel-body {
+    text-align: right;
+  }
+
+  // Grid system adjustments
+  .row {
+    direction: rtl;
+  }
+
+  [class*="col-"] {
+    float: right;
+  }
+
+  // Sidebar and navigation
+  .sidebar {
+    right: 0;
+    left: auto;
+
+    ul,
+    li {
+      text-align: right;
+    }
+  }
+
+  // Icons and arrows adjustments
+  .fa-chevron-right:before {
+    content: "\f053";
+  }
+
+  .fa-chevron-left:before {
+    content: "\f054";
+  }
+
+  .fa-arrow-right:before {
+    content: "\f060";
+  }
+
+  .fa-arrow-left:before {
+    content: "\f061";
+  }
+
+  // Patient dashboard specific adjustments
+  .patient-header,
+  .patient-info {
+    text-align: right;
+  }
+
+  .dashboard-sections {
+    direction: rtl;
+  }
+
+  .section-title {
+    text-align: right;
+  }
+
+  // Clinical forms and observations
+  .obs-form {
+    direction: rtl;
+
+    .form-field {
+      text-align: right;
+    }
+  }
+
+  .concept-set {
+    direction: rtl;
+
+    .concept-name {
+      text-align: right;
+    }
+  }
+
+  // Date picker adjustments (keep LTR for date components)
+  .datepicker {
+    direction: ltr;
+
+    table {
+      direction: ltr;
+    }
+  }
+
+  // Tabs navigation
+  .nav-tabs {
+    border-bottom: 1px solid #ddd;
+
+    > li {
+      float: right;
+      margin-bottom: -1px;
+      margin-left: 2px;
+      margin-right: 0;
+
+      > a {
+        border-radius: 4px 4px 0 0;
+      }
+    }
+  }
+
+  // Search and filter components
+  .search-box,
+  .filter-section {
+    text-align: right;
+  }
+
+  // Breadcrumb navigation
+  .breadcrumb {
+    direction: rtl;
+
+    > li + li:before {
+      content: "\0020\f053\0020";
+      padding: 0 5px;
+      color: #ccc;
+    }
+  }
+
+  // Clinical observation specific RTL styles
+  .observation-section {
+    text-align: right;
+
+    .obs-value,
+    .obs-comment {
+      text-align: right;
+    }
+  }
+
+  // Registration form RTL adjustments
+  .registration-form {
+    direction: rtl;
+
+    .form-group {
+      text-align: right;
+    }
+  }
+
+  .patient-search-results {
+    direction: rtl;
+
+    table {
+      direction: rtl;
+    }
+  }
+
+  // Specific adjustments for Persian text
+  &[lang="fa"] {
+    font-family: "Tahoma", "Arial", sans-serif;
+
+    .persian-number {
+      font-family: "B Nazanin", "Tahoma", sans-serif;
+    }
+  }
+}
+
+// Print styles for RTL
+@media print {
+  .rtl-layout {
+    direction: rtl !important;
+    text-align: right !important;
+
+    .print-header {
+      text-align: right !important;
+    }
+
+    .print-content {
+      direction: rtl !important;
+    }
+  }
+}
+
+// Responsive adjustments for RTL
+@media (max-width: 768px) {
+  .rtl-layout {
+    .navbar-nav,
+    .navbar-brand {
+      float: none;
+    }
+
+    .sidebar {
+      right: -250px;
+
+      &.open {
+        right: 0;
+      }
+    }
+  }
+}

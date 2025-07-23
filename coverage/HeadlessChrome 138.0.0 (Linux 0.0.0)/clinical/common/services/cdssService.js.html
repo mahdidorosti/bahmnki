@@ -1,0 +1,1175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for clinical/common/services/cdssService.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">clinical/common/services/</a> cdssService.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.14% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>101/144</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">44.9% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>44/98</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.55% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>35/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.14% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>101/144</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.clinical')
+    .service('cdssService', ['drugService', '$rootScope', function (drugService, $rootScope) {
+        var createMedicationRequest = function (medication, patientUuid, conceptSource) {
+            return extractCodeInfo(medication, conceptSource).then(function (coding) {
+                var medicationRequest = {
+                    resourceType: 'MedicationRequest',
+                    id: medication.uuid,
+                    status: 'active',
+                    intent: 'order',
+                    subject: {
+                        reference: 'Patient/' + patientUuid
+                    },
+                    medicationCodeableConcept: {
+                        id: medication.drug.uuid,
+                        coding: coding,
+                        text: medication.drugNameDisplay
+                    },
+                    "dosageInstruction": [
+                        {
+                            "text": angular.toJson({ "instructions": medication.instructions }),
+                            "timing": {
+                                "event": [medication.effectiveStartDate],
+                                "repeat": {
+                                    "duration": medication.durationInDays,
+                                    "durationUnit": 'd'
+                                },
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "code": medication.drug.uuid,
+                                            "display": medication.uniformDosingType.frequency
+                                        }
+                                    ],
+                                    "text": medication.uniformDosingType.frequency
+                                }
+                            },
+                            "asNeededBoolean": medication.asNeeded,
+                            "doseAndRate": [
+                                {
+                                    "doseQuantity": {
+                                        "value": medication.uniformDosingType.dose,
+                                        "unit": medication.doseUnits,
+                                        "code": medication.drug.uuid
+                                    }
+                                }
+                            ],
+                            "route": {
+                                "coding": [{
+                                    "system": conceptSource,
+                                    "code": "",
+                                    "display": medication.route
+                                }
+                                ],
+                                "text": medication.route
+                            }
+                        }
+                    ]
+&nbsp;
+                };
+                return {
+                    resource: medicationRequest
+                };
+            });
+        };
+&nbsp;
+        var extractConditionInfo = <span class="fstat-no" title="function not covered" >function (condition) {</span>
+<span class="cstat-no" title="statement not covered" >            var uuid = condition.concept.uuid.split('/');</span>
+<span class="cstat-no" title="statement not covered" >            var code = uuid[uuid.length - 1];</span>
+<span class="cstat-no" title="statement not covered" >            uuid.pop();</span>
+<span class="cstat-no" title="statement not covered" >            var system = uuid.join('/');</span>
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                code: code,
+                system: system,
+                display: condition.concept.name
+            };
+        };
+&nbsp;
+        var extractCodeInfo = function (medication, conceptSource) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (!(medication.drug.drugReferenceMaps &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >medication.drug.drugReferenceMaps.length &gt; 0)</span>) {
+                return Promise.resolve([{
+                    code: medication.drug.uuid,
+                    display: medication.drug.name,
+                    system: 'https://fhir.openmrs.org'
+                }]);
+            } else {
+<span class="cstat-no" title="statement not covered" >                var drugReferenceMap = medication.drug.drugReferenceMaps[0];</span>
+<span class="cstat-no" title="statement not covered" >                if (!conceptSource) {</span>
+<span class="cstat-no" title="statement not covered" >                    return drugService.getDrugConceptSourceMapping(medication.drug.uuid).then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        var bundle = response.data;</span>
+<span class="cstat-no" title="statement not covered" >                        var code = bundle.entry &amp;&amp; bundle.entry.length &gt; 0 &amp;&amp; bundle.entry[0].resource.code;</span>
+<span class="cstat-no" title="statement not covered" >                        var conceptCode = code.coding.find(<span class="fstat-no" title="function not covered" >function (coding) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return coding.system;</span>
+                        });
+<span class="cstat-no" title="statement not covered" >                        if (conceptCode) {</span>
+<span class="cstat-no" title="statement not covered" >                            localStorage.setItem("conceptSource", conceptCode.system);</span>
+<span class="cstat-no" title="statement not covered" >                            conceptSource = conceptCode.system;</span>
+<span class="cstat-no" title="statement not covered" >                            return [{</span>
+                                system: conceptSource,
+                                code: drugReferenceMap.conceptReferenceTerm &amp;&amp; drugReferenceMap.conceptReferenceTerm.display &amp;&amp; drugReferenceMap.conceptReferenceTerm.display.split(':')[1].trim(),
+                                display: medication.drug.name
+                            }, {
+                                code: medication.drug.uuid,
+                                system: 'https://fhir.openmrs.org',
+                                display: medication.drug.name
+                            }];
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            return [{</span>
+                                code: medication.drug.uuid,
+                                display: medication.drug.name,
+                                system: 'https://fhir.openmrs.org'
+                            }];
+                        }
+                    });
+                } else {
+<span class="cstat-no" title="statement not covered" >                    return Promise.resolve([{</span>
+                        system: conceptSource,
+                        code: drugReferenceMap.conceptReferenceTerm &amp;&amp; drugReferenceMap.conceptReferenceTerm.display &amp;&amp; drugReferenceMap.conceptReferenceTerm.display.split(':')[1].trim(),
+                        display: medication.drug.name
+                    }, {
+                        code: medication.drug.uuid,
+                        system: 'https://fhir.openmrs.org',
+                        display: medication.drug.name
+                    }]);
+                }
+            }
+        };
+&nbsp;
+        var createConditionResource = function (condition, patientUuid, isDiagnosis) {
+            var conceptLimitIndex = isDiagnosis ? -1 : <span class="branch-1 cbranch-no" title="branch not covered" >condition.concept.uuid.lastIndexOf('/');</span>
+            var conditionStatus = condition.status || condition.diagnosisStatus || condition.certainty;
+            var activeConditions = ['CONFIRMED', 'PRESUMED', 'ACTIVE'];
+            var status = (!conditionStatus || activeConditions.indexOf(conditionStatus) &gt; -1) ? 'active' : <span class="branch-1 cbranch-no" title="branch not covered" >'inactive';</span>
+            var conditionCoding = condition.concept ? <span class="branch-0 cbranch-no" title="branch not covered" >extractConditionInfo(condition) </span>: {
+                system: isDiagnosis ? condition.codedAnswer.conceptSystem : (<span class="branch-1 cbranch-no" title="branch not covered" >conceptLimitIndex &gt; -1 ? (condition.concept.uuid.substring(0, conceptLimitIndex) || '') : '')</span>,
+                code: isDiagnosis ? condition.codedAnswer.uuid : (<span class="branch-1 cbranch-no" title="branch not covered" >conceptLimitIndex &gt; -1 ? condition.concept.uuid.substring(conceptLimitIndex + 1) : condition.concept.uuid)</span>,
+                display: isDiagnosis ? condition.codedAnswer.name : <span class="branch-1 cbranch-no" title="branch not covered" >condition.concept.name</span>
+            };
+&nbsp;
+            var conditionResource = {
+                resourceType: 'Condition',
+                id: condition.uuid,
+                clinicalStatus: {
+                    coding: [
+                        {
+                            code: status,
+                            display: status,
+                            system: 'http://terminology.hl7.org/CodeSystem/condition-clinical'
+                        }
+                    ]
+                },
+                code: {
+                    coding: [ conditionCoding ],
+                    text: isDiagnosis ? condition.codedAnswer.name : <span class="branch-1 cbranch-no" title="branch not covered" >condition.concept.name</span>
+                },
+                subject: {
+                    reference: 'Patient/' + patientUuid
+                }
+            };
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (angular.isNumber(condition.onSetDate) === 'number') {
+<span class="cstat-no" title="statement not covered" >                conditionResource.onsetDateTime = new Date(condition.onSetDate).toLocaleDateString('en-CA');</span>
+            }
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (!conditionResource.onsetDateTime) {
+                delete conditionResource.onsetDateTime;
+            }
+            return {
+                resource: conditionResource
+            };
+        };
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function createPatientResource (patient) {</span>
+<span class="cstat-no" title="statement not covered" >            var patientResource = {</span>
+                resourceType: 'Patient',
+                id: patient.uuid
+            };
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                resource: patientResource
+            };
+        }
+&nbsp;
+        var createFhirBundle = function (patient, conditions, medications, diagnosis, conceptSource) {
+            var encounterResource = conditions.filter(function (condition) {
+                return !condition.uuid;
+            }).map(<span class="fstat-no" title="function not covered" >function (condition) {</span>
+<span class="cstat-no" title="statement not covered" >                return createConditionResource(condition, patient.uuid, false);</span>
+            });
+            encounterResource = encounterResource.concat(diagnosis.map(function (condition) {
+                return createConditionResource(condition, patient.uuid, true);
+            }));
+&nbsp;
+            medications = medications.filter(function (medication) {
+                return angular.isDefined(medication.include) &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >medication.include </span>|| medication.include === undefined;
+            });
+&nbsp;
+            return Promise.all(medications.map(function (medication) {
+                return createMedicationRequest(medication, patient.uuid, conceptSource).then(function (medicationResource) {
+                    return medicationResource;
+                });
+            })).then(function (medicationResources) {
+                var bundleResource = {
+                    resourceType: 'Bundle',
+                    type: 'collection',
+                    entry: []
+                };
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (medicationResources.length === 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >encounterResource.length === 0)</span> {
+<span class="cstat-no" title="statement not covered" >                    var patientResource = createPatientResource(patient);</span>
+<span class="cstat-no" title="statement not covered" >                    bundleResource.entry = bundleResource.entry.concat(patientResource);</span>
+<span class="cstat-no" title="statement not covered" >                    return bundleResource;</span>
+                }
+                bundleResource.entry = bundleResource.entry.concat(encounterResource, medicationResources);
+                return bundleResource;
+            });
+        };
+&nbsp;
+        var getAlerts = <span class="fstat-no" title="function not covered" >function (cdssEnabled, consultation, patient) {</span>
+<span class="cstat-no" title="statement not covered" >            if (cdssEnabled) {</span>
+<span class="cstat-no" title="statement not covered" >                var consultationData = angular.copy(consultation);</span>
+<span class="cstat-no" title="statement not covered" >                consultationData.patient = patient;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var orderSetTreatments = consultationData.newlyAddedTabTreatments ? consultationData.newlyAddedTabTreatments.allMedicationTabConfig.orderSetTreatments : [];</span>
+<span class="cstat-no" title="statement not covered" >                var drafts = consultationData.newlyAddedTabTreatments ? consultationData.newlyAddedTabTreatments.allMedicationTabConfig.treatments : [];</span>
+<span class="cstat-no" title="statement not covered" >                consultationData.draftDrug = drafts.concat(orderSetTreatments);</span>
+<span class="cstat-no" title="statement not covered" >                var params = createParams(consultationData);</span>
+<span class="cstat-no" title="statement not covered" >                createFhirBundle(params.patient, params.conditions, params.medications, params.diagnosis)</span>
+                .then(<span class="fstat-no" title="function not covered" >function (bundle) {</span>
+<span class="cstat-no" title="statement not covered" >                    var cdssAlerts = drugService.sendDiagnosisDrugBundle(bundle);</span>
+<span class="cstat-no" title="statement not covered" >                    cdssAlerts.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        var alerts = response.data;</span>
+<span class="cstat-no" title="statement not covered" >                        var existingAlerts = $rootScope.cdssAlerts || [];</span>
+<span class="cstat-no" title="statement not covered" >                        $rootScope.cdssAlerts = addNewAlerts(alerts, existingAlerts, bundle);</span>
+                    });
+                });
+            }
+        };
+&nbsp;
+        var createParams = function (consultationData) {
+            var patient = consultationData.patient;
+            var conditions = consultationData.condition &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >consultationData.condition.concept.uuid </span>? <span class="branch-0 cbranch-no" title="branch not covered" >consultationData.conditions.concat(consultationData.condition) </span>: consultationData.conditions;
+            var diagnosis = consultationData.newlyAddedDiagnoses &amp;&amp; consultationData.newlyAddedDiagnoses.filter(function (diagnosis) {
+                return diagnosis.codedAnswer &amp;&amp; diagnosis.codedAnswer.name;
+            }) || <span class="branch-2 cbranch-no" title="branch not covered" >[];</span>
+            var medications = consultationData.draftDrug;
+            return {
+                patient: patient,
+                conditions: conditions,
+                diagnosis: diagnosis,
+                medications: medications
+            };
+        };
+&nbsp;
+        var getAlertMedicationCodes = function (alert) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (alert.referenceMedications) {
+                var codeList = [];
+                alert.referenceMedications.forEach(function (med) {
+                    var extractedCodes = med.coding.map(function (coding) {
+                        return coding.code;
+                    });
+                    codeList = codeList.concat(extractedCodes);
+                });
+                return codeList;
+            }
+<span class="cstat-no" title="statement not covered" >            return [];</span>
+        };
+&nbsp;
+        var getAlertConditionCodes = function (alert) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (alert.referenceConditions) {
+                var codeList = [];
+                alert.referenceConditions.forEach(function (med) {
+                    var extractedCodes = med.coding.filter(function (cond) {
+                        return !localStorage.getItem("conceptSource") || <span class="branch-1 cbranch-no" title="branch not covered" >cond.system.includes(localStorage.getItem("conceptSource"));</span>
+                    }).map(function (coding) {
+                        return coding.code;
+                    });
+                    codeList = codeList.concat(extractedCodes);
+                });
+                return codeList;
+            }
+<span class="cstat-no" title="statement not covered" >            return [];</span>
+        };
+&nbsp;
+        var getMedicationCodesFromEntry = function (entry) {
+            return entry.resource.medicationCodeableConcept.coding[0].code;
+        };
+&nbsp;
+        var getConditionCodesFromEntry = function (entry) {
+            return entry.resource.code.coding[0].code;
+        };
+&nbsp;
+        var isMedicationRequest = function (entry) {
+            return entry.resource.resourceType === 'MedicationRequest';
+        };
+&nbsp;
+        var isCondition = function (entry) {
+            return entry.resource.resourceType === 'Condition';
+        };
+&nbsp;
+        var checkAlertBundleMatch = function (alert, bundle) {
+            var alertMedicationCodes = getAlertMedicationCodes(alert);
+            var alertConditionCodes = getAlertConditionCodes(alert);
+&nbsp;
+            var bundleMedicationCodes = bundle.entry
+              .filter(isMedicationRequest)
+              .map(getMedicationCodesFromEntry);
+&nbsp;
+            var bundleConditionCodes = bundle.entry
+              .filter(isCondition)
+              .map(getConditionCodesFromEntry);
+&nbsp;
+            return (
+              alertMedicationCodes.some(function (code) {
+                  return bundleMedicationCodes.includes(code);
+              }) ||
+<span class="branch-1 cbranch-no" title="branch not covered" >              alertConditionCodes.some(<span class="fstat-no" title="function not covered" >function (code) {</span></span>
+<span class="cstat-no" title="statement not covered" >                  return bundleConditionCodes.includes(code);</span>
+              })
+            );
+        };
+&nbsp;
+        var addNewAlerts = function (newAlerts, currentAlerts, bundle) {
+            var activeAlerts = newAlerts.map(function (item) {
+                var isAlertInBundle = checkAlertBundleMatch(item, bundle);
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (isAlertInBundle) {
+                    item.isActive = true;
+                }
+                item.detail = item.detail.indexOf('\n') &gt; -1 ? <span class="branch-0 cbranch-no" title="branch not covered" >marked.parse(item.detail) </span>: item.detail;
+                return item;
+            });
+            if (!currentAlerts || (currentAlerts &amp;&amp; currentAlerts.length === 0)) {
+                return activeAlerts;
+            }
+            var alerts = activeAlerts.map(function (alert) {
+                var getAlert = currentAlerts.find(function (currentAlert) {
+                    return currentAlert.uuid === alert.uuid;
+                });
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (getAlert) {
+                    <span class="missing-if-branch" title="if path not taken" >I</span>if (alert.indicator !== getAlert.indicator || (alert.alertType === "High Dosage" &amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >alert.summary.match(/\d+/g).sort().join('') !== getAlert.summary.match(/\d+/g).sort().join(''))</span>) {
+<span class="cstat-no" title="statement not covered" >                        alert.isActive = true;</span>
+                    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (!isSubset(getAlertConditionCodes(getAlert), getAlertConditionCodes(alert)) || !isSubset(getAlertMedicationCodes(getAlert), getAlertMedicationCodes(alert))) {
+<span class="cstat-no" title="statement not covered" >                        alert.isActive = true;</span>
+                    } else {
+                        alert.isActive = getAlert.isActive;
+                    }
+                }
+                return alert;
+            });
+&nbsp;
+            return alerts;
+        };
+        var isSubset = function (oldList, newList) {
+            return newList.every(function (newItem) {
+                return oldList.includes(newItem);
+            });
+        };
+&nbsp;
+        var sortInteractionsByStatus = function (alerts) {
+            var order = { "critical": 0, "warning": 1, "info": 2 };
+            return alerts.sort(function (a, b) {
+                return order[a.indicator] - order[b.indicator];
+            });
+        };
+&nbsp;
+        return {
+            createFhirBundle: createFhirBundle,
+            createParams: createParams,
+            addNewAlerts: addNewAlerts,
+            sortInteractionsByStatus: sortInteractionsByStatus,
+            getAlerts: getAlerts
+        };
+    }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

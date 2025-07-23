@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for home/controllers/loginLocationController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">home/controllers/</a> loginLocationController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.79% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>67/96</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.15% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>12/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">55.56% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>15/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.21% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>66/94</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.home')
+    .controller('LoginLocationController', ['$rootScope', '$scope', '$window', '$location', 'sessionService', 'initialData', 'spinner', '$q', '$stateParams', '$bahmniCookieStore', 'localeService', '$translate', 'userService', 'auditLogService', 'rtlService',
+        function ($rootScope, $scope, $window, $location, sessionService, initialData, spinner, $q, $stateParams, $bahmniCookieStore, localeService, $translate, userService, auditLogService, rtlService) {
+            var redirectUrl = $location.search()['from'];
+            var landingPagePath = "/dashboard";
+            var loginPagePath = "/login";
+            const LOGIN_LOCATIONS = "Login Locations";
+            $scope.loginInfo = {};
+            var localeLanguages = [];
+&nbsp;
+            var getLocalTimeZone = function () {
+                var currentLocalTime = new Date().toString();
+                var localTimeZoneList = currentLocalTime.split(" ");
+                var localTimeZone = localTimeZoneList[localTimeZoneList.length - 1];
+                localTimeZone = localTimeZone.substring(1, localTimeZone.length - 1);
+                return localTimeZone;
+            };
+&nbsp;
+            var userLoginLocations = function () {
+                var loginLocations = localStorage.getItem("loginLocations");
+                return loginLocations ? JSON.parse(loginLocations) : [];
+            };
+&nbsp;
+            var identifyLoginLocations = function (allLocations) {
+                var loginLocations = userLoginLocations();
+                if (loginLocations.length === 0) {
+                    return allLocations;
+                }
+                return loginLocations;
+            };
+&nbsp;
+            $scope.locations = identifyLoginLocations(initialData.locations);
+&nbsp;
+            var findLanguageByLocale = function (localeCode) {
+                return _.find(localeLanguages, function (localeLanguage) {
+                    return localeLanguage.code == localeCode;
+                });
+            };
+&nbsp;
+            var logAuditForLoginAttempts = <span class="fstat-no" title="function not covered" >function (eventType, isFailedEvent) {</span>
+<span class="cstat-no" title="statement not covered" >                if ($scope.loginInfo.username) {</span>
+<span class="cstat-no" title="statement not covered" >                    var messageParams = isFailedEvent ? {userName: $scope.loginInfo.username} : undefined;</span>
+<span class="cstat-no" title="statement not covered" >                    auditLogService.log(undefined, eventType, messageParams, 'MODULE_LABEL_LOGIN_KEY');</span>
+                }
+            };
+&nbsp;
+            var promise = localeService.allowedLocalesList();
+&nbsp;
+            // Initialize RTL direction on controller load
+            rtlService.initialize();
+&nbsp;
+            // Setup language change watcher for RTL
+            rtlService.setupLanguageWatcher($scope);
+&nbsp;
+            localeService.serverDateTime().then(function (response) {
+                var serverTime = response.data.date;
+                var offset = response.data.offset;
+                var localTime = new Date().toLocaleString();
+                var localtimeZone = getLocalTimeZone();
+                var localeTimeZone = localTime + " " + localtimeZone;
+                $scope.timeZoneObject = { serverTime: serverTime, localeTimeZone: localeTimeZone};
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (offset &amp;&amp; !new Date().toString().includes(offset)) {
+                    $scope.warning = "Warning";
+                    $scope.warningMessage = "WARNING_SERVER_TIME_ZONE_MISMATCH";
+                }
+            });
+&nbsp;
+            localeService.getLoginText().then(function (response) {
+                $scope.logo = response.data.loginPage.logo;
+                $scope.bottomLogos = response.data.loginPage.bottomLogos;
+                $scope.headerText = response.data.loginPage.showHeaderText;
+                $scope.titleText = response.data.loginPage.showTitleText;
+                $scope.helpLink = response.data.helpLink.url;
+            });
+&nbsp;
+            localeService.getLocalesLangs().then(function (response) {
+                localeLanguages = response.data.locales;
+            }).finally(function () {
+                promise.then(function (response) {
+                    var localeList = response.data.replace(/\s+/g, '').split(',');
+                    $scope.locales = [];
+                    _.forEach(localeList, function (locale) {
+                        var localeLanguage = findLanguageByLocale(locale);
+                        <span class="missing-if-branch" title="else path not taken" >E</span>if (_.isUndefined(localeLanguage)) {
+                            $scope.locales.push({"code": locale, "nativeName": locale});
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            $scope.locales.push(localeLanguage);</span>
+                        }
+                    });
+                    $scope.selectedLocale = $translate.use() ? <span class="branch-0 cbranch-no" title="branch not covered" >$translate.use() </span>: $scope.locales[0].code;
+                });
+            });
+&nbsp;
+            var getLoginLocationUuid = function () { return $bahmniCookieStore.get(Bahmni.Common.Constants.locationCookieName) ? $bahmniCookieStore.get(Bahmni.Common.Constants.locationCookieName).uuid : <span class="branch-1 cbranch-no" title="branch not covered" >null;</span> };
+&nbsp;
+            var getLastLoggedinLocation = function () {
+                return _.find(initialData.locations, function (location) {
+                    return location.uuid === getLoginLocationUuid();
+                });
+            };
+&nbsp;
+            $scope.loginInfo.currentLocation = getLastLoggedinLocation();
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if ($stateParams.showLoginMessage) {
+<span class="cstat-no" title="statement not covered" >                $scope.errorMessageTranslateKey = "LOGIN_LABEL_LOGIN_ERROR_MESSAGE_KEY";</span>
+            }
+&nbsp;
+            var redirectToLandingPageIfAlreadyAuthenticated = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                sessionService.get().then(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (data.authenticated) {</span>
+<span class="cstat-no" title="statement not covered" >                        $location.path(landingPagePath);</span>
+                    }
+                });
+            };
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if ($location.path() === loginPagePath) {
+<span class="cstat-no" title="statement not covered" >                redirectToLandingPageIfAlreadyAuthenticated();</span>
+            }
+            var onSuccessfulAuthentication = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                $scope.loginInfo.currentLocation = getLastLoggedinLocation();</span>
+<span class="cstat-no" title="statement not covered" >                $rootScope.$broadcast('event:auth-loggedin');</span>
+            };
+&nbsp;
+            $scope.updateSessionLocation = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                $scope.errorMessageTranslateKey = null;</span>
+<span class="cstat-no" title="statement not covered" >                var deferrable = $q.defer();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                sessionService.updateSession($scope.loginInfo.currentLocation, null).then(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    sessionService.loadCredentials().then(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                        onSuccessfulAuthentication();</span>
+<span class="cstat-no" title="statement not covered" >                        userService.savePreferences().then(</span>
+<span class="fstat-no" title="function not covered" >                            function () {</span> <span class="cstat-no" title="statement not covered" >deferrable.resolve(); </span>},
+<span class="fstat-no" title="function not covered" >                            function (error) {</span> <span class="cstat-no" title="statement not covered" >deferrable.reject(error); </span>}
+                        );
+<span class="cstat-no" title="statement not covered" >                        logAuditForLoginAttempts("USER_LOGIN_LOCATION_SUCCESS");</span>
+                    }, <span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.errorMessageTranslateKey = error;</span>
+<span class="cstat-no" title="statement not covered" >                        deferrable.reject(error);</span>
+<span class="cstat-no" title="statement not covered" >                        logAuditForLoginAttempts("USER_LOGIN_LOCATION_FAILED", true);</span>
+                    });
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                spinner.forPromise(deferrable.promise).then(</span>
+<span class="fstat-no" title="function not covered" >                    function (data) {</span>
+<span class="cstat-no" title="statement not covered" >                        if (data) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered" >                        $location.url(landingPagePath);</span>
+                    }
+                );
+            };
+&nbsp;
+            $scope.changeLocale = <span class="fstat-no" title="function not covered" >function (locale) {</span>
+<span class="cstat-no" title="statement not covered" >                $translate.use(locale);</span>
+<span class="cstat-no" title="statement not covered" >                moment.locale(locale);</span>
+                // RTL direction will be automatically applied via the language watcher
+            };
+        }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ot/controller/otCalendarController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">ot/controller/</a> otCalendarController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.47% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>132/190</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.03% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>35/66</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">68.18% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>30/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.47% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>132/190</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-yes">56×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">56×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">109×</span>
+<span class="cline-any cline-yes">109×</span>
+<span class="cline-any cline-yes">109×</span>
+<span class="cline-any cline-yes">109×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">96×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">96×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-yes">154×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.ot')
+    .controller('otCalendarController', ['$scope', '$rootScope', '$q', '$interval', '$state', 'spinner', 'locationService', 'surgicalAppointmentService', '$timeout', 'appService', 'surgicalAppointmentHelper',
+        function ($scope, $rootScope, $q, $interval, $state, spinner, locationService, surgicalAppointmentService, $timeout, appService, surgicalAppointmentHelper) {
+            var updateCurrentDayTimeline = function () {
+                $scope.currentTimeLineHeight = heightPerMin * Bahmni.Common.Util.DateUtil.diffInMinutes($scope.calendarStartDatetime, new Date());
+            };
+            var updateBlocksStartDatetimeAndBlocksEndDatetime = function () {
+                $scope.blocksStartDatetime = $scope.weekOrDay === 'day' ? $scope.viewDate : moment($scope.weekStartDate).startOf('day');
+                $scope.blocksEndDatetime = $scope.weekOrDay === 'day' ? moment($scope.viewDate).endOf('day') : moment(Bahmni.Common.Util.DateUtil.getWeekEndDate($scope.weekStartDate)).endOf('day');
+            };
+            $scope.isModalVisible = false;
+            $scope.notesStartDate = false;
+            $scope.notesEndDate = false;
+            $scope.isEdit = false;
+            $scope.showDeletePopUp = false;
+            $scope.styleForBlock = <span class="fstat-no" title="function not covered" >function (index) {</span>
+<span class="cstat-no" title="statement not covered" >                if (index === 6) {</span>
+<span class="cstat-no" title="statement not covered" >                    return { 'border-right': '.5px solid lightgrey'};</span>
+                }
+            };
+            var setValidStartDate = <span class="fstat-no" title="function not covered" >function (viewDate) {</span>
+<span class="cstat-no" title="statement not covered" >                const currentDate = new Date(viewDate);</span>
+<span class="cstat-no" title="statement not covered" >                $scope.validStartDate = $scope.weekDates[0];</span>
+<span class="cstat-no" title="statement not covered" >                while (currentDate &gt; new Date($scope.weekDates[0])) {</span>
+<span class="cstat-no" title="statement not covered" >                    const prev = new Date(currentDate);</span>
+<span class="cstat-no" title="statement not covered" >                    currentDate.setDate(currentDate.getDate() - 1);</span>
+<span class="cstat-no" title="statement not covered" >                    if ($scope.notesForWeek[currentDate]) {</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.validStartDate = prev;</span>
+<span class="cstat-no" title="statement not covered" >                        break;</span>
+                    }
+                }
+            };
+            var setValidEndDate = <span class="fstat-no" title="function not covered" >function (viewDate) {</span>
+<span class="cstat-no" title="statement not covered" >                const currentDate = new Date(viewDate);</span>
+<span class="cstat-no" title="statement not covered" >                $scope.validEndDate = $scope.weekDates[6];</span>
+<span class="cstat-no" title="statement not covered" >                while (currentDate &lt; new Date($scope.weekDates[6])) {</span>
+<span class="cstat-no" title="statement not covered" >                    const prev = new Date(currentDate);</span>
+<span class="cstat-no" title="statement not covered" >                    currentDate.setDate(currentDate.getDate() + 1);</span>
+<span class="cstat-no" title="statement not covered" >                    if ($scope.notesForWeek[currentDate]) {</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.validEndDate = prev;</span>
+<span class="cstat-no" title="statement not covered" >                        break;</span>
+                    }
+                }
+            };
+&nbsp;
+            $scope.showNotesPopup = <span class="fstat-no" title="function not covered" >function (weekStartDate, addIndex) {</span>
+<span class="cstat-no" title="statement not covered" >                const currentDate = new Date(weekStartDate);</span>
+<span class="cstat-no" title="statement not covered" >                const isDayView = addIndex === undefined;</span>
+<span class="cstat-no" title="statement not covered" >                if (isDayView) {</span>
+<span class="cstat-no" title="statement not covered" >                    addIndex = 0;</span>
+                }
+<span class="cstat-no" title="statement not covered" >                currentDate.setDate(currentDate.getDate() + addIndex);</span>
+<span class="cstat-no" title="statement not covered" >                $scope.notesStartDate = currentDate;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.notesEndDate = currentDate;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.isModalVisible = true;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.isDayView = $state.weekOrDay === 'day';</span>
+<span class="cstat-no" title="statement not covered" >                if (!$scope.isDayView) {</span>
+<span class="cstat-no" title="statement not covered" >                    setValidStartDate(currentDate);</span>
+<span class="cstat-no" title="statement not covered" >                    setValidEndDate(currentDate);</span>
+                }
+<span class="cstat-no" title="statement not covered" >                $scope.hostData = {</span>
+                    notes: '',
+                    noteId: '',
+                    isDayView: isDayView,
+                    weekStartDateTime: $scope.validStartDate,
+                    weekEndDateTime: $scope.validEndDate,
+                    noteDate: currentDate
+                };
+            };
+            $scope.showNotesPopupEdit = <span class="fstat-no" title="function not covered" >function (weekStartDate, addIndex) {</span>
+<span class="cstat-no" title="statement not covered" >                $scope.isModalVisible = true;</span>
+<span class="cstat-no" title="statement not covered" >                const getNoteForTheDay = $scope.getNotesForWeek(weekStartDate, addIndex);</span>
+<span class="cstat-no" title="statement not covered" >                $scope.hostData = {</span>
+                    notes: getNoteForTheDay[0].noteText,
+                    noteId: getNoteForTheDay[0].noteId,
+                    isDayView: $state.weekOrDay === 'day',
+                    weekStartDateTime: $scope.validStartDate,
+                    weekEndDateTime: $scope.validEndDate,
+                    noteDate: new Date(getNoteForTheDay[0].noteDate),
+                    providerUuid: $rootScope.currentProvider.uuid
+                };
+            };
+&nbsp;
+            $scope.openDeletePopup = <span class="fstat-no" title="function not covered" >function (weekStartDate, index) {</span>
+<span class="cstat-no" title="statement not covered" >                if (weekStartDate) {</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.currentDate = new Date(weekStartDate);</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.currentDate.setDate($scope.currentDate.getDate() + index);</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.hostData = {</span>
+                        noteId: $scope.getNotesForWeek(weekStartDate, index)[0].noteId
+                    };
+                } else {
+<span class="cstat-no" title="statement not covered" >                    $scope.hostData = {</span>
+                        noteId: $scope.noteId
+                    };
+                }
+<span class="cstat-no" title="statement not covered" >                $scope.showDeletePopUp = true;</span>
+            };
+&nbsp;
+            $scope.hostApi = {
+                onSuccess: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                    $state.go("otScheduling", {viewDate: $scope.viewDate}, {reload: true});</span>
+                },
+                onClose: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.$apply(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                        $scope.showDeletePopUp = false;</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.isModalVisible = false;</span>
+                    });
+                }
+            };
+            var heightPerMin = 120 / $scope.dayViewSplit;
+            var showToolTipForNotes = function () {
+                $('.notes-text').tooltip({
+                    content: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                        var vm = (this);</span>
+<span class="cstat-no" title="statement not covered" >                        return $(vm).prop('title');</span>
+                    },
+                    track: true
+                });
+            };
+            const getNotes = function () {
+                if ($scope.weekOrDay === 'day') {
+                    return surgicalAppointmentService.getBulkNotes(new Date($scope.viewDate));
+                } else if ($scope.weekOrDay === 'week') {
+                    return surgicalAppointmentService.getBulkNotes($scope.weekStartDate, getWeekDate(7));
+                }
+            };
+            var init = function () {
+                var dayStart = ($scope.dayViewStart || <span class="branch-1 cbranch-no" title="branch not covered" >Bahmni.OT.Constants.defaultCalendarStartTime)</span>.split(':');
+                var dayEnd = ($scope.dayViewEnd || <span class="branch-1 cbranch-no" title="branch not covered" >Bahmni.OT.Constants.defaultCalendarEndTime)</span>.split(':');
+                $scope.surgicalBlockSelected = {};
+                $scope.surgicalAppointmentSelected = {};
+                $scope.editDisabled = true;
+                $scope.cancelDisabled = true;
+                $scope.addActualTimeDisabled = true;
+                $scope.isModalVisible = false;
+                $scope.showDeletePopUp = false;
+                $scope.dayViewSplit = parseInt($scope.dayViewSplit) &gt; 0 ? parseInt($scope.dayViewSplit) : <span class="branch-1 cbranch-no" title="branch not covered" >60;</span>
+                $scope.calendarStartDatetime = Bahmni.Common.Util.DateUtil.addMinutes($scope.viewDate, (dayStart[0] * 60 + parseInt(dayStart[1])));
+                $scope.calendarEndDatetime = Bahmni.Common.Util.DateUtil.addMinutes($scope.viewDate, (dayEnd[0] * 60 + parseInt(dayEnd[1])));
+                updateCurrentDayTimeline();
+                updateBlocksStartDatetimeAndBlocksEndDatetime();
+                $scope.rows = $scope.getRowsForCalendar();
+                return $q.all([locationService.getAllByTag('Operation Theater'),
+                    surgicalAppointmentService.getSurgicalBlocksInDateRange($scope.blocksStartDatetime, $scope.blocksEndDatetime, false, true),
+                    surgicalAppointmentService.getSurgeons(),
+                    getNotes()]).then(function (response) {
+                        $scope.locations = response[0].data.results;
+                        $scope.weekDates = $scope.getAllWeekDates();
+                        var surgicalBlocksByLocation = _.map($scope.locations, function (location) {
+                            return _.filter(response[1].data.results, function (surgicalBlock) {
+                                return surgicalBlock.location.uuid === location.uuid;
+                            });
+                        });
+                        <span class="missing-if-branch" title="if path not taken" >I</span>if (response[3] &amp;&amp; response[3].status === 200) {
+<span class="cstat-no" title="statement not covered" >                            $scope.noteForTheDay = response[3].data.length &gt; 0 ? response[3].data[0].noteText : '';</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.noteId = response[3].data.length &gt; 0 ? response[3].data[0].noteId : '';</span>
+                        } else {
+                            $scope.noteForTheDay = '';
+                            $scope.noteId = '';
+                        }
+                        var providerNames = appService.getAppDescriptor().getConfigValue("primarySurgeonsForOT");
+                        $scope.surgeons = surgicalAppointmentHelper.filterProvidersByName(providerNames, response[2].data.results);
+                        var surgicalBlocksBySurgeons = _.map($scope.surgeons, function (surgeon) {
+                            return _.filter(response[1].data.results, function (surgicalBlock) {
+                                return surgicalBlock.provider.uuid === surgeon.uuid;
+                            });
+                        });
+                        $scope.surgicalBlocksByDate = _.map($scope.weekDates, function (weekDate) {
+                            return _.filter(response[1].data.results, function (surgicalBlock) {
+                                return $scope.isSurgicalBlockActiveOnGivenDate(surgicalBlock, weekDate);
+                            });
+                        });
+&nbsp;
+                        $scope.getNotesForWeek = function (weekStartDate, index) {
+                            const date = new Date(weekStartDate);
+                            <span class="missing-if-branch" title="else path not taken" >E</span>if (index === undefined) {
+                                const notesForAWeek = {};
+                                response[3].data.map(function (note) {
+                                    notesForAWeek[new Date(note.noteDate)] = note;
+                                });
+                                return notesForAWeek;
+                            }
+<span class="cstat-no" title="statement not covered" >                            return _.filter(response[3].data, <span class="fstat-no" title="function not covered" >function (note) {</span></span>
+<span class="cstat-no" title="statement not covered" >                                const currentDate = new Date(date);</span>
+<span class="cstat-no" title="statement not covered" >                                currentDate.setDate(date.getDate() + index);</span>
+<span class="cstat-no" title="statement not covered" >                                return new Date(note.noteDate).getDate() === (currentDate).getDate();</span>
+                            });
+                        };
+&nbsp;
+                        if ($scope.weekOrDay === 'week') {
+                            $scope.notesForWeek = $scope.getNotesForWeek();
+                        }
+&nbsp;
+                        $scope.getNotesForDay = <span class="fstat-no" title="function not covered" >function (weekStartDate, index) {</span>
+<span class="cstat-no" title="statement not covered" >                            var notes = $scope.getNotesForWeek(weekStartDate, index);</span>
+<span class="cstat-no" title="statement not covered" >                            return notes.length &gt; 0 ? notes[0].noteText : '';</span>
+                        };
+&nbsp;
+                        $scope.blockedOtsOfTheWeek = getBlockedOtsOfTheWeek();
+                        showToolTipForNotes();
+&nbsp;
+                        var setOTView = function (providerToggle) {
+                            $scope.providerToggle = providerToggle;
+                            if (providerToggle) {
+                                $scope.surgicalBlocks = surgicalBlocksBySurgeons;
+                            } else {
+                                $scope.surgicalBlocks = surgicalBlocksByLocation;
+                            }
+                        };
+                        setOTView($rootScope.providerToggle);
+                        $scope.$on("event:providerView", function (event, providerToggle) {
+                            setOTView(providerToggle);
+                        });
+                    });
+            };
+&nbsp;
+            $scope.isSurgicalBlockActiveOnGivenDate = function (surgicalBlock, weekDate) {
+                return Bahmni.Common.Util.DateUtil.isSameDate(moment(surgicalBlock.startDatetime).startOf('day').toDate(), weekDate) ||
+                    moment(surgicalBlock.endDatetime).toDate() &gt; weekDate;
+            };
+&nbsp;
+            $scope.intervals = function () {
+                var dayStart = ($scope.dayViewStart || <span class="branch-1 cbranch-no" title="branch not covered" >'00:00')</span>.split(':');
+                var dayEnd = ($scope.dayViewEnd || <span class="branch-1 cbranch-no" title="branch not covered" >'23:59')</span>.split(':');
+                var noOfIntervals = ((dayEnd[0] * 60 + parseInt(dayEnd[1])) - (dayStart[0] * 60 + parseInt(dayStart[1]))) / $scope.dayViewSplit;
+                return Math.ceil(noOfIntervals);
+            };
+&nbsp;
+            $scope.getRowsForCalendar = function () {
+                var rows = [];
+                for (var i = 0; i &lt; $scope.intervals(); i++) {
+                    var row = {
+                        date: Bahmni.Common.Util.DateUtil.addMinutes($scope.calendarStartDatetime, i * ($scope.dayViewSplit))
+                    };
+                    rows.push(row);
+                }
+                return rows;
+            };
+&nbsp;
+            $scope.shouldDisplayCurrentTimeLine = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                return moment().isBefore($scope.calendarEndDatetime) &amp;&amp; moment().isAfter($scope.calendarStartDatetime);</span>
+            };
+&nbsp;
+            $scope.updateBlockedOtsOfTheDay = function (dayIndex) {
+                $scope.blockedOtsOfTheDay = $scope.blockedOtsOfTheWeek[dayIndex];
+            };
+&nbsp;
+            var getWeekDate = function (index) {
+                return moment($scope.weekStartDate).add(index, 'days').toDate();
+            };
+&nbsp;
+            $scope.getAllWeekDates = function () {
+                if ($scope.weekStartDate != null) {
+                    var weekDates = [];
+                    for (var dayIndex = 0; dayIndex &lt; 7; dayIndex++) {
+                        weekDates.push(getWeekDate(dayIndex));
+                    }
+                    return weekDates;
+                }
+            };
+&nbsp;
+            var getBlockedOtsOfTheWeek = function () {
+                var blockedOtsOfWeeks = [];
+                for (var dayIndex = 0; dayIndex &lt; 7; dayIndex++) {
+                    blockedOtsOfWeeks.push(getBlockedOtsOftheDay(dayIndex));
+                }
+                return blockedOtsOfWeeks;
+            };
+&nbsp;
+            var getBlockedOtsOftheDay = function (dayIndex) {
+                var otsOfDay = [];
+                if ($scope.weekOrDay === 'week') {
+                    var blocksCount = $scope.surgicalBlocksByDate[dayIndex].length;
+                    for (var blockIndex = 0; blockIndex &lt; blocksCount; blockIndex++) {
+                        <span class="missing-if-branch" title="else path not taken" >E</span>if (!otsOfDay.includes($scope.surgicalBlocksByDate[dayIndex][blockIndex].location.uuid)) {
+                            otsOfDay.push($scope.surgicalBlocksByDate[dayIndex][blockIndex].location.uuid);
+                        }
+                    }
+                }
+                return getOrderedOtsByLocation(otsOfDay);
+            };
+&nbsp;
+            var getOrderedOtsByLocation = function (otsOfDay) {
+                var orderedOts = [];
+                <span class="missing-if-branch" title="else path not taken" >E</span>if ($scope.locations != null) {
+                    orderedOts = _.map(_.filter($scope.locations, function (location) {
+                        return otsOfDay.includes(location.uuid);
+                    }), function (ot) {
+                        return ot.uuid;
+                    });
+                }
+                return orderedOts;
+            };
+&nbsp;
+            var timer = $interval(updateCurrentDayTimeline, 3000000);
+&nbsp;
+            $scope.$on('$destroy', <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                $interval.cancel(timer);</span>
+            });
+&nbsp;
+            $scope.$watch("viewDate", function (newValue, oldValue) {
+                if ($scope.weekOrDay === 'day') {
+                    <span class="missing-if-branch" title="if path not taken" >I</span>if (!Bahmni.Common.Util.DateUtil.isSameDate(oldValue, newValue)) {
+<span class="cstat-no" title="statement not covered" >                        spinner.forPromise(init());</span>
+                    }
+                }
+            });
+            $scope.$watch("weekStartDate", function (newValue, oldValue) {
+                if ($scope.weekOrDay === 'week') {
+                    <span class="missing-if-branch" title="if path not taken" >I</span>if (!Bahmni.Common.Util.DateUtil.isSameDate(moment(oldValue).toDate(), moment(newValue).toDate())) {
+<span class="cstat-no" title="statement not covered" >                        spinner.forPromise(init());</span>
+                    }
+                }
+            });
+            spinner.forPromise(init());
+        }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

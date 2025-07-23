@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ot/directives/otCalendarSurgicalBlock.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">ot/directives/</a> otCalendarSurgicalBlock.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.14% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>68/70</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.97% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>22/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">90.91% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>20/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.14% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>68/70</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.ot')
+    .directive('otCalendarSurgicalBlock', ['surgicalAppointmentHelper', function (surgicalAppointmentHelper) {
+        var link = function ($scope) {
+            var totalWidthInPercentile = 96;
+            var gridCellHeight = 120;
+            var heightForSurgeonName = 21;
+            var surgicalBlockHeightPerMin = gridCellHeight / $scope.dayViewSplit;
+            $scope.operationTheatre = $scope.surgicalBlock.location.name;
+&nbsp;
+            var getViewPropertiesForSurgicalBlock = function () {
+                var surgicalBlockHeight = getHeightForSurgicalBlock();
+                $scope.blockDimensions = {
+                    height: surgicalBlockHeight,
+                    width: $scope.weekOrDay === 'week' ? getWidthForSurgicalBlock() : totalWidthInPercentile,
+                    top: getTopForSurgicalBlock(),
+                    left: $scope.weekOrDay === 'week' ? getLeftPositionForSurgicalBlock() : 0,
+                    color: getColorForProvider(),
+                    appointmentHeightPerMin: (surgicalBlockHeight - heightForSurgeonName) / Bahmni.Common.Util.DateUtil.diffInMinutes(
+                        getSurgicalBlockStartDateTimeBasedOnCalendarStartDateTime(), getSurgicalBlockEndDateTimeBasedOnCalendarEndDateTime())
+                };
+            };
+&nbsp;
+            var getColorForProvider = function () {
+                var otCalendarColorAttribute = _.find($scope.surgicalBlock.provider.attributes, function (attribute) {
+                    return attribute.attributeType.display === 'otCalendarColor';
+                });
+&nbsp;
+                var hue = otCalendarColorAttribute &amp;&amp; otCalendarColorAttribute.value ? otCalendarColorAttribute.value.toString() : "0";
+                var backgroundColor = "hsl(" + hue + ", 100%, 90%)";
+                var borderColor = "hsl(" + hue + ",100%, 60%)";
+                return {
+                    backgroundColor: backgroundColor,
+                    borderColor: borderColor
+                };
+            };
+            var getWidthForSurgicalBlock = function () {
+                <span class="missing-if-branch" title="else path not taken" >E</span>if ($scope.blockedOtsOfTheDay != null) {
+                    return totalWidthInPercentile / $scope.blockedOtsOfTheDay.length;
+                }
+            };
+&nbsp;
+            var getLeftPositionForSurgicalBlock = function () {
+                var index = 1;
+                <span class="missing-if-branch" title="else path not taken" >E</span>if ($scope.blockedOtsOfTheDay != null) {
+                    index = $scope.blockedOtsOfTheDay.indexOf(($scope.surgicalBlock.location.uuid));
+                }
+                return (index * getWidthForSurgicalBlock()) + 1;
+            };
+            var getHeightForSurgicalBlock = function () {
+                return Bahmni.Common.Util.DateUtil.diffInMinutes(
+                    getSurgicalBlockStartDateTimeBasedOnCalendarStartDateTime(), getSurgicalBlockEndDateTimeBasedOnCalendarEndDateTime()) * surgicalBlockHeightPerMin;
+            };
+&nbsp;
+            var getTopForSurgicalBlock = function () {
+                var top = Bahmni.Common.Util.DateUtil.diffInMinutes(
+                    getCalendarStartDateTime($scope.viewDate), $scope.surgicalBlock.startDatetime) * surgicalBlockHeightPerMin;
+                return top &gt; 0 ? <span class="branch-0 cbranch-no" title="branch not covered" >top </span>: 0;
+            };
+            var getCalendarStartDateTime = function (date) {
+                var dayStart = ($scope.dayViewStart || Bahmni.OT.Constants.defaultCalendarStartTime).split(':');
+                return Bahmni.Common.Util.DateUtil.addMinutes(moment(date).startOf('day'), (dayStart[0] * 60 + parseInt(dayStart[1])));
+            };
+&nbsp;
+            var getCalendarEndDateTime = function (date) {
+                var dayEnd = ($scope.dayViewEnd || Bahmni.OT.Constants.defaultCalendarEndTime).split(':');
+                return Bahmni.Common.Util.DateUtil.addMinutes(moment(date).startOf('day'), (dayEnd[0] * 60 + parseInt(dayEnd[1])));
+            };
+&nbsp;
+            var getSurgicalBlockStartDateTimeBasedOnCalendarStartDateTime = function () {
+                return moment($scope.surgicalBlock.startDatetime).toDate() &lt; getCalendarStartDateTime($scope.viewDate)
+                    ? getCalendarStartDateTime($scope.viewDate) : $scope.surgicalBlock.startDatetime;
+            };
+&nbsp;
+            var getSurgicalBlockEndDateTimeBasedOnCalendarEndDateTime = function () {
+                return getCalendarEndDateTime($scope.viewDate) &lt; moment($scope.surgicalBlock.endDatetime).toDate()
+                    ? <span class="branch-0 cbranch-no" title="branch not covered" >getCalendarEndDateTime($scope.viewDate) </span>: $scope.surgicalBlock.endDatetime;
+            };
+&nbsp;
+            var calculateEstimatedAppointmentDuration = function () {
+                var surgicalAppointments = _.filter($scope.surgicalBlock.surgicalAppointments, function (surgicalAppointment) {
+                    return $scope.isValidSurgicalAppointment(surgicalAppointment);
+                });
+                surgicalAppointments = _.sortBy(surgicalAppointments, ['sortWeight']);
+                var nextAppointmentStartDatetime = moment($scope.surgicalBlock.startDatetime).toDate();
+                $scope.surgicalBlock.surgicalAppointments = _.map(surgicalAppointments, function (surgicalAppointment) {
+                    surgicalAppointment.derivedAttributes = {};
+                    surgicalAppointment.derivedAttributes.duration = surgicalAppointmentHelper.getEstimatedDurationForAppointment(surgicalAppointment);
+                    surgicalAppointment.derivedAttributes.expectedStartDatetime = nextAppointmentStartDatetime;
+                    surgicalAppointment.derivedAttributes.expectedEndDatetime = Bahmni.Common.Util.DateUtil.addMinutes(nextAppointmentStartDatetime,
+                        surgicalAppointment.derivedAttributes.duration);
+                    surgicalAppointment.derivedAttributes.height = Bahmni.Common.Util.DateUtil.diffInMinutes(
+                        surgicalAppointment.derivedAttributes.expectedStartDatetime &lt; getCalendarStartDateTime($scope.viewDate)
+                            ? getCalendarStartDateTime($scope.viewDate) : <span class="branch-1 cbranch-no" title="branch not covered" >surgicalAppointment.derivedAttributes.expectedStartDatetime,</span>
+                        getCalendarEndDateTime($scope.viewDate) &lt; surgicalAppointment.derivedAttributes.expectedEndDatetime
+                            ? <span class="branch-0 cbranch-no" title="branch not covered" >getCalendarEndDateTime($scope.viewDate) </span>: surgicalAppointment.derivedAttributes.expectedEndDatetime
+                    );
+                    surgicalAppointment.primaryDiagnosis = new Bahmni.OT.SurgicalBlockMapper().mapPrimaryDiagnoses(surgicalAppointment.patientObservations);
+&nbsp;
+                    nextAppointmentStartDatetime = surgicalAppointment.derivedAttributes.expectedEndDatetime;
+                    return surgicalAppointment;
+                });
+            };
+&nbsp;
+            $scope.isValidSurgicalAppointment = function (surgicalAppointment) {
+                return surgicalAppointment.status !== Bahmni.OT.Constants.cancelled &amp;&amp; surgicalAppointment.status !== Bahmni.OT.Constants.postponed;
+            };
+&nbsp;
+            $scope.canShowInCalendarView = <span class="fstat-no" title="function not covered" >function (surgicalAppointment) {</span>
+<span class="cstat-no" title="statement not covered" >                return $scope.isValidSurgicalAppointment(surgicalAppointment)</span>
+                    &amp;&amp; surgicalAppointment.derivedAttributes.expectedStartDatetime &lt; getCalendarEndDateTime($scope.viewDate)
+                    &amp;&amp; surgicalAppointment.derivedAttributes.expectedEndDatetime &gt; getCalendarStartDateTime($scope.viewDate);
+            };
+&nbsp;
+            $scope.selectSurgicalBlock = function ($event) {
+                $scope.$emit("event:surgicalBlockSelect", $scope.surgicalBlock);
+                $event.stopPropagation();
+            };
+&nbsp;
+            $scope.surgicalBlockExceedsCalendar = function () {
+                return moment($scope.surgicalBlock.endDatetime).toDate() &gt; getCalendarEndDateTime($scope.surgicalBlock.endDatetime);
+            };
+&nbsp;
+            var showToolTipForSurgicalBlock = function () {
+                $('.surgical-block').tooltip({
+                    content: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                        return $(this).prop('title');</span>
+                    },
+                    track: true
+                });
+            };
+&nbsp;
+            getViewPropertiesForSurgicalBlock();
+            calculateEstimatedAppointmentDuration();
+            showToolTipForSurgicalBlock();
+        };
+        return {
+            restrict: 'E',
+            link: link,
+            scope: {
+                surgicalBlock: "=",
+                blockedOtsOfTheDay: "=",
+                dayViewStart: "=",
+                dayViewEnd: "=",
+                dayViewSplit: "=",
+                filterParams: "=",
+                weekOrDay: "=",
+                viewDate: "="
+            },
+            templateUrl: "../ot/views/calendarSurgicalBlock.html"
+        };
+    }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

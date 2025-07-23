@@ -1,0 +1,294 @@
+// RTL (Right-to-Left) styles for Persian language support
+// This file contains styles that apply when the language is set to Persian (fa)
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+
+  // Override default text alignment
+  .text-left {
+    text-align: right !important;
+  }
+  .text-right {
+    text-align: left !important;
+  }
+
+  // Float overrides
+  .pull-left {
+    float: right !important;
+  }
+  .pull-right {
+    float: left !important;
+  }
+
+  // Form elements
+  .form-horizontal {
+    fieldset {
+      label {
+        float: right;
+        margin-right: 20px;
+        margin-left: 0;
+        text-align: right;
+
+        @media screen and (max-width: 1024px) {
+          margin-right: 20px;
+        }
+        @media screen and (max-width: 850px) {
+          margin-right: 20px;
+        }
+      }
+
+      &.hasLegend {
+        label {
+          margin-right: 10px;
+          margin-left: 0;
+        }
+        .offset-label {
+          padding-right: 0px;
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+
+  // Input groups and form controls
+  .form-control {
+    text-align: right;
+  }
+
+  .input-group {
+    .input-group-addon {
+      &:first-child {
+        border-left: 1px solid #ccc;
+        border-right: 0;
+        border-radius: 0 4px 4px 0;
+      }
+      &:last-child {
+        border-right: 1px solid #ccc;
+        border-left: 0;
+        border-radius: 4px 0 0 4px;
+      }
+    }
+  }
+
+  // Buttons
+  .btn-group {
+    > .btn {
+      &:first-child {
+        border-radius: 0 4px 4px 0;
+      }
+      &:last-child {
+        border-radius: 4px 0 0 4px;
+      }
+    }
+  }
+
+  // Navigation and menus
+  .navbar-nav {
+    > li {
+      float: right;
+    }
+  }
+
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+    text-align: right;
+  }
+
+  // Breadcrumbs
+  .breadcrumb {
+    > li {
+      + li:before {
+        content: "\\ ";
+        padding: 0 5px 0 0;
+      }
+    }
+  }
+
+  // Tables
+  .table {
+    th, td {
+      text-align: right;
+    }
+
+    th {
+      &:first-child {
+        border-radius: 0 4px 0 0;
+      }
+      &:last-child {
+        border-radius: 4px 0 0 0;
+      }
+    }
+  }
+
+  // Modals and dialogs
+  .modal-header {
+    .close {
+      float: left;
+      margin-left: -2px;
+      margin-right: auto;
+    }
+  }
+
+  // Pagination
+  .pagination {
+    > li {
+      &:first-child {
+        > a, > span {
+          border-radius: 0 4px 4px 0;
+        }
+      }
+      &:last-child {
+        > a, > span {
+          border-radius: 4px 0 0 4px;
+        }
+      }
+    }
+  }
+
+  // Custom Bahmni-specific RTL styles
+  .asterick {
+    padding-right: 5px;
+    padding-left: 0;
+  }
+
+  // Grid and layout adjustments
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+  .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
+  .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+  .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6,
+  .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: right;
+  }
+
+  // Specific adjustments for clinical forms and patient data
+  .patient-info {
+    text-align: right;
+
+    .patient-name {
+      text-align: right;
+    }
+  }
+
+  // Calendar and date picker adjustments
+  .calendar-container {
+    direction: rtl;
+
+    .calendar-day {
+      text-align: center;
+    }
+  }
+
+  // Search and filter components
+  .search-box {
+    input {
+      text-align: right;
+      padding-right: 10px;
+      padding-left: 30px;
+    }
+
+    .search-icon {
+      right: auto;
+      left: 5px;
+    }
+  }
+
+  // Tab navigation
+  .nav-tabs {
+    border-bottom: 1px solid #ddd;
+
+    > li {
+      float: right;
+      margin-bottom: -1px;
+
+      > a {
+        margin-left: 2px;
+        margin-right: 0;
+        border-radius: 4px 4px 0 0;
+      }
+    }
+  }
+
+  // Progress bars
+  .progress-bar {
+    float: right;
+  }
+
+  // Alerts and notifications
+  .alert {
+    .close {
+      float: left;
+      right: auto;
+      left: -21px;
+    }
+  }
+
+  // Lists
+  .list-group {
+    .list-group-item {
+      .badge {
+        float: left;
+      }
+    }
+  }
+
+  // Card layouts
+  .card, .panel {
+    .card-header, .panel-heading {
+      text-align: right;
+    }
+
+    .card-body, .panel-body {
+      text-align: right;
+    }
+  }
+
+  // Specific medical form adjustments
+  .obs-form {
+    .obs-label {
+      text-align: right;
+      float: right;
+    }
+
+    .obs-value {
+      text-align: right;
+    }
+  }
+
+  // Patient dashboard specific styles
+  .patient-dashboard {
+    .section-title {
+      text-align: right;
+    }
+
+    .section-content {
+      text-align: right;
+    }
+  }
+
+  // Clinical notes and observations
+  .clinical-notes {
+    text-align: right;
+
+    .note-header {
+      text-align: right;
+    }
+
+    .note-content {
+      text-align: right;
+    }
+  }
+}
+
+// Language-specific font adjustments for Persian
+html[lang="fa"], [lang="fa"] {
+  font-family: "Tahoma", "Arial", sans-serif;
+
+  // Ensure proper text rendering for Persian characters
+  .persian-text {
+    font-family: "Tahoma", "Arial", sans-serif;
+    line-height: 1.6;
+  }
+}

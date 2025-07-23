@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for registration/controllers/editPatientController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">registration/controllers/</a> editPatientController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.97% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>54/74</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.13% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>17/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.97% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>54/74</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.registration')
+    .controller('EditPatientController', ['$scope', 'patientService', 'encounterService', '$stateParams', 'openmrsPatientMapper',
+        '$window', '$q', 'spinner', 'appService', 'messagingService', '$rootScope', 'auditLogService',
+        function ($scope, patientService, encounterService, $stateParams, openmrsPatientMapper, $window, $q, spinner,
+                  appService, messagingService, $rootScope, auditLogService) {
+            var dateUtil = Bahmni.Common.Util.DateUtil;
+            var uuid = $stateParams.patientUuid;
+            $scope.patient = {};
+            $scope.actions = {};
+            $scope.addressHierarchyConfigs = appService.getAppDescriptor().getConfigValue("addressHierarchy");
+            $scope.disablePhotoCapture = appService.getAppDescriptor().getConfigValue("disablePhotoCapture");
+            $scope.today = dateUtil.getDateWithoutTime(dateUtil.now());
+&nbsp;
+            var setReadOnlyFields = function () {
+                $scope.readOnlyFields = {};
+                var readOnlyFields = appService.getAppDescriptor().getConfigValue("readOnlyFields");
+                angular.forEach(readOnlyFields, function (readOnlyField) {
+                    if ($scope.patient[readOnlyField]) {
+                        $scope.readOnlyFields[readOnlyField] = true;
+                    }
+                });
+            };
+&nbsp;
+            var successCallBack = function (openmrsPatient) {
+                $scope.openMRSPatient = openmrsPatient["patient"];
+                $scope.patient = openmrsPatientMapper.map(openmrsPatient);
+                setReadOnlyFields();
+                expandDataFilledSections();
+                $scope.patientLoaded = true;
+                $scope.enableWhatsAppButton = (appService.getAppDescriptor().getConfigValue("enableWhatsAppButton") || Bahmni.Registration.Constants.enableWhatsAppButton) &amp;&amp; ($scope.patient.phoneNumber != undefined);
+                $scope.relatedIdentifierAttribute = appService.getAppDescriptor().getConfigValue('relatedIdentifierAttribute');
+                <span class="missing-if-branch" title="if path not taken" >I</span>if ($scope.relatedIdentifierAttribute &amp;&amp; $scope.relatedIdentifierAttribute.name) {
+<span class="cstat-no" title="statement not covered" >                    const hideOrDisableAttr = $scope.relatedIdentifierAttribute.hideOrDisable;</span>
+<span class="cstat-no" title="statement not covered" >                    const hideAttrOnValue = $scope.relatedIdentifierAttribute.hideOnValue;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.showRelatedIdentifierOption = !(hideOrDisableAttr === "hide" &amp;&amp; $scope.patient[$scope.relatedIdentifierAttribute.name] &amp;&amp;</span>
+                                            $scope.patient[$scope.relatedIdentifierAttribute.name].toString() === hideAttrOnValue);
+<span class="cstat-no" title="statement not covered" >                    $scope.showDisabledAttrOption = hideOrDisableAttr === "disable" ? true : false;</span>
+                }
+            };
+&nbsp;
+            var expandDataFilledSections = function () {
+                angular.forEach($rootScope.patientConfiguration &amp;&amp; $rootScope.patientConfiguration.getPatientAttributesSections(), function (section) {
+                    var notNullAttribute = _.find(section &amp;&amp; section.attributes, function (attribute) {
+                        return $scope.patient[attribute.name] !== undefined;
+                    });
+                    section.expand = section.expanded || (notNullAttribute ? true : <span class="branch-1 cbranch-no" title="branch not covered" >false)</span>;
+                });
+            };
+&nbsp;
+            (function () {
+                var getPatientPromise = patientService.get(uuid).then(successCallBack);
+&nbsp;
+                var isDigitized = encounterService.getDigitized(uuid);
+&nbsp;
+                var identifiers = patientService.getAllPatientIdentifiers(uuid);
+&nbsp;
+                identifiers.then(function (response) {
+                    $rootScope.patientIdentifiers = response.data.results;
+                });
+&nbsp;
+                isDigitized.then(<span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >                    var encountersWithObservations = data.data.results.filter(<span class="fstat-no" title="function not covered" >function (encounter) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        return encounter.obs.length &gt; 0;</span>
+                    });
+<span class="cstat-no" title="statement not covered" >                    $scope.isDigitized = encountersWithObservations.length &gt; 0;</span>
+                });
+&nbsp;
+                spinner.forPromise($q.all([getPatientPromise, isDigitized, identifiers]));
+            })();
+&nbsp;
+            $scope.update = function () {
+                addNewRelationships();
+                var errorMessages = Bahmni.Common.Util.ValidationUtil.validate($scope.patient, $scope.patientConfiguration.attributeTypes);
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (errorMessages.length &gt; 0) {
+<span class="cstat-no" title="statement not covered" >                    errorMessages.forEach(<span class="fstat-no" title="function not covered" >function (errorMessage) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        messagingService.showMessage('error', errorMessage);</span>
+                    });
+<span class="cstat-no" title="statement not covered" >                    return $q.when({});</span>
+                }
+&nbsp;
+                return spinner.forPromise(patientService.update($scope.patient, $scope.openMRSPatient).then(function (result) {
+                    var patientProfileData = result.data;
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (!patientProfileData.error) {
+                        successCallBack(patientProfileData);
+                        $scope.actions.followUpAction(patientProfileData);
+                    }
+                }));
+            };
+&nbsp;
+            var addNewRelationships = function () {
+                var newRelationships = _.filter($scope.patient.newlyAddedRelationships, <span class="fstat-no" title="function not covered" >function (relationship) {</span>
+<span class="cstat-no" title="statement not covered" >                    return relationship.relationshipType &amp;&amp; relationship.relationshipType.uuid;</span>
+                });
+                newRelationships = _.each(newRelationships, <span class="fstat-no" title="function not covered" >function (relationship) {</span>
+<span class="cstat-no" title="statement not covered" >                    delete relationship.patientIdentifier;</span>
+<span class="cstat-no" title="statement not covered" >                    delete relationship.content;</span>
+<span class="cstat-no" title="statement not covered" >                    delete relationship.providerName;</span>
+                });
+                $scope.patient.relationships = _.concat(newRelationships, $scope.patient.deletedRelationships);
+            };
+&nbsp;
+            $scope.isReadOnly = <span class="fstat-no" title="function not covered" >function (field) {</span>
+<span class="cstat-no" title="statement not covered" >                return $scope.readOnlyFields ? ($scope.readOnlyFields[field] ? true : false) : undefined;</span>
+            };
+&nbsp;
+            $scope.notifyOnWhatsAapp = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                var name = $scope.patient.givenName + " " + $scope.patient.familyName;</span>
+<span class="cstat-no" title="statement not covered" >                var whatsAppMessage = patientService.getRegistrationMessage($scope.patient.primaryIdentifier.identifier, name, $scope.patient.age.years, $scope.patient.gender);</span>
+<span class="cstat-no" title="statement not covered" >                var phoneNumber = $scope.patient.phoneNumber.replace("+", "");</span>
+<span class="cstat-no" title="statement not covered" >                var url = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&amp;text=" + encodeURIComponent(whatsAppMessage);</span>
+<span class="cstat-no" title="statement not covered" >                window.open(url);</span>
+            };
+&nbsp;
+            $scope.afterSave = function () {
+                auditLogService.log($scope.patient.uuid, Bahmni.Registration.StateNameEvenTypeMap['patient.edit'], undefined, "MODULE_LABEL_REGISTRATION_KEY");
+                messagingService.showMessage("info", "REGISTRATION_LABEL_SAVED");
+            };
+        }]);
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

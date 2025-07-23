@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ot/helpers/surgicalAppointmentHelper.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">ot/helpers/</a> surgicalAppointmentHelper.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>55/55</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>25/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>55/55</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">37×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">71×</span>
+<span class="cline-any cline-yes">123×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">58×</span>
+<span class="cline-any cline-yes">94×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">132×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">35×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">35×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">47×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">120×</span>
+<span class="cline-any cline-yes">120×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.ot')
+    .service('surgicalAppointmentHelper', [function () {
+        this.filterProvidersByName = function (providerNames, providers) {
+            if (!providerNames || providerNames.length === 0) {
+                return _.filter(providers, function (provider) {
+                    return provider.person.display != "";
+                });
+            }
+            var validProviderNames = _.filter(providerNames, function (providerName) {
+                return _.find(providers, function (provider) {
+                    return providerName === provider.person.display;
+                });
+            });
+            return _.map(validProviderNames, function (providerName) {
+                return _.find(providers, function (provider) {
+                    return providerName === provider.person.display;
+                });
+            });
+        };
+&nbsp;
+        this.getPatientDisplayLabel = function (display) {
+            return display.split(' - ')[1] + " ( " + display.split(' - ')[0] + " )";
+        };
+&nbsp;
+        this.getAppointmentAttributes = function (surgicalAppointment) {
+            return _.reduce(surgicalAppointment.surgicalAppointmentAttributes, function (attributes, attribute) {
+                attributes[attribute.surgicalAppointmentAttributeType.name] = attribute.value;
+                return attributes;
+            }, {});
+        };
+&nbsp;
+        this.getEstimatedDurationForAppointment = function (surgicalAppointment) {
+            var attributes = this.getAppointmentAttributes(surgicalAppointment);
+            return this.getAppointmentDuration(attributes.estTimeHours, attributes.estTimeMinutes, attributes.cleaningTime);
+        };
+&nbsp;
+        this.getAppointmentDuration = function (estTimeHours, estTimeMinutes, cleaningTime) {
+            return estTimeHours * 60 + (parseInt(estTimeMinutes) || 0) + (parseInt(cleaningTime) || 0);
+        };
+&nbsp;
+        this.filterSurgicalAppointmentsByStatus = function (surgicalAppointments, appointmentStatusList) {
+            if (_.isEmpty(appointmentStatusList)) {
+                return surgicalAppointments;
+            }
+            return _.filter(surgicalAppointments, function (appointment) {
+                return appointmentStatusList.indexOf(appointment.status) &gt;= 0;
+            });
+        };
+&nbsp;
+        this.filterSurgicalAppointmentsByPatient = function (surgicalAppointments, patient) {
+            if (!patient) {
+                return surgicalAppointments;
+            }
+            return _.filter(surgicalAppointments, function (appointment) {
+                return appointment.patient.uuid === patient.uuid;
+            });
+        };
+&nbsp;
+        this.getAttributesFromAttributeNames = function (attributes, attributeNames) {
+            const configuredAttributes = {};
+            if (attributes) {
+                _.each(attributeNames, function (attributeName) {
+                    configuredAttributes[attributeName] = attributes[attributeName];
+                });
+            }
+            return configuredAttributes;
+        };
+&nbsp;
+        this.getAttributesFromAttributeTypes = function (attributes, attributeTypes) {
+            const configuredAttributes = {};
+            if (attributes) {
+                _.each(attributeTypes, function (attributeType) {
+                    configuredAttributes[attributeType.name] = attributes[attributeType.name];
+                });
+            }
+            return configuredAttributes;
+        };
+&nbsp;
+        this.getAttributeTypesByRemovingAttributeNames = function (defaultAttributeTypes, attributeNames) {
+            if (!attributeNames) {
+                return defaultAttributeTypes;
+            }
+            return _.filter(defaultAttributeTypes, function (attributeType) {
+                return !attributeNames.includes(attributeType.name);
+            });
+        };
+&nbsp;
+        this.getDefaultAttributeTranslations = function () {
+            return new Map([['procedure', "OT_SURGICAL_APPOINTMENT_PROCEDURE"],
+                ['estTimeHours', "OT_SURGICAL_APPOINTMENT_HOURS"], ['estTimeMinutes', "OT_SURGICAL_APPOINTMENT_MINUTES"],
+                ['cleaningTime', "OT_SURGICAL_APPOINTMENT_CLEANING_TIME"], ['otherSurgeon', "OT_SURGICAL_APPOINTMENT_OTHER_SURGEON"],
+                ['surgicalAssistant', "OT_SURGICAL_APPOINTMENT_SURGICAL_ASSISTANT"], ['anaesthetist', "OT_SURGICAL_APPOINTMENT_ANAESTHETIST"],
+                ['scrubNurse', "OT_SURGICAL_APPOINTMENT_SCRUB_NURSE"], ['circulatingNurse', "OT_SURGICAL_APPOINTMENT_CIRCULATING_NURSE"],
+                ['notes', "OT_SURGICAL_APPOINTMENT_NOTES"], ['Status', "OT_SURGICAL_APPOINTMENT_STATUS"], ['Day', "OT_SURGICAL_BLOCK_START_DAY"],
+                ['Date', "OT_SURGICAL_BLOCK_START_DATE"], ['Identifier', "PATIENT_ATTRIBUTE_IDENTIFIER"],
+                ['Patient Name', "PATIENT_ATTRIBUTE_PATIENT_NAME"], ['Patient Age', "PERSON_ATTRIBUTE_PATIENT_AGE"],
+                ['Start Time', "OT_SURGICAL_BLOCK_START_TIME"], ['Est Time', "OT_SURGICAL_APPOINTMENT_ESTIMATED_TIME"],
+                ['Actual Time', "OT_SURGICAL_APPOINTMENT_ACTUAL_TIME"], ['OT#', "OT_SURGICAL_BLOCK_LOCATION_NAME"],
+                ['Surgeon', "OT_PROVIDER_SURGEON"], ['Status Change Notes', "OT_SURGICAL_APPOINTMENT_STATUS_CHANGE_NOTES"],
+                ['Bed Location', "OT_SURGICAL_APPOINTMENT_BED_LOCATION"],
+                ['Bed ID', "OT_SURGICAL_APPOINTMENT_BED_ID"]
+            ]);
+        };
+&nbsp;
+        this.getSurgicalAttributes = function (surgicalAppointment) {
+            return _.reduce(surgicalAppointment.surgicalAppointmentAttributes, function (attributes, attribute) {
+                attributes[attribute.surgicalAppointmentAttributeType.name] = attribute.value;
+                return attributes;
+            }, {});
+        };
+    }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+/* RTL Layout Styles for Persian and other RTL languages */
+/* line 32, rtl.scss */
+.rtl-layout {
+  direction: rtl;
+  text-align: right;
+}
+/* line 37, rtl.scss */
+.rtl-layout .ltr-content {
+  direction: ltr;
+  text-align: left;
+}
+/* line 43, rtl.scss */
+.rtl-layout .navbar-nav {
+  float: right;
+}
+/* line 47, rtl.scss */
+.rtl-layout .navbar-brand {
+  float: right;
+}
+/* line 51, rtl.scss */
+.rtl-layout .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+/* line 57, rtl.scss */
+.rtl-layout .form-control {
+  text-align: right;
+}
+/* line 62, rtl.scss */
+.rtl-layout .form-group label {
+  text-align: right;
+}
+/* line 67, rtl.scss */
+.rtl-layout .checkbox,
+.rtl-layout .radio {
+  text-align: right;
+}
+/* line 71, rtl.scss */
+.rtl-layout .checkbox input[type="checkbox"],
+.rtl-layout .checkbox input[type="radio"],
+.rtl-layout .radio input[type="checkbox"],
+.rtl-layout .radio input[type="radio"] {
+  margin-right: 0;
+  margin-left: -20px;
+}
+/* line 79, rtl.scss */
+.rtl-layout .btn-group {
+  direction: rtl;
+}
+/* line 83, rtl.scss */
+.rtl-layout .btn-toolbar {
+  text-align: right;
+}
+/* line 88, rtl.scss */
+.rtl-layout table {
+  direction: rtl;
+}
+/* line 91, rtl.scss */
+.rtl-layout table th,
+.rtl-layout table td {
+  text-align: right;
+}
+/* line 98, rtl.scss */
+.rtl-layout .modal-header {
+  text-align: right;
+}
+/* line 102, rtl.scss */
+.rtl-layout .modal-footer {
+  text-align: left;
+}
+/* line 105, rtl.scss */
+.rtl-layout .modal-footer .btn {
+  margin-left: 0;
+  margin-right: 5px;
+}
+/* line 112, rtl.scss */
+.rtl-layout .panel-heading,
+.rtl-layout .panel-body {
+  text-align: right;
+}
+/* line 118, rtl.scss */
+.rtl-layout .row {
+  direction: rtl;
+}
+/* line 122, rtl.scss */
+.rtl-layout [class*="col-"] {
+  float: right;
+}
+/* line 127, rtl.scss */
+.rtl-layout .sidebar {
+  right: 0;
+  left: auto;
+}
+/* line 131, rtl.scss */
+.rtl-layout .sidebar ul,
+.rtl-layout .sidebar li {
+  text-align: right;
+}
+/* line 138, rtl.scss */
+.rtl-layout .fa-chevron-right:before {
+  content: "\f053";
+}
+/* line 142, rtl.scss */
+.rtl-layout .fa-chevron-left:before {
+  content: "\f054";
+}
+/* line 146, rtl.scss */
+.rtl-layout .fa-arrow-right:before {
+  content: "\f060";
+}
+/* line 150, rtl.scss */
+.rtl-layout .fa-arrow-left:before {
+  content: "\f061";
+}
+/* line 155, rtl.scss */
+.rtl-layout .patient-header,
+.rtl-layout .patient-info {
+  text-align: right;
+}
+/* line 160, rtl.scss */
+.rtl-layout .dashboard-sections {
+  direction: rtl;
+}
+/* line 164, rtl.scss */
+.rtl-layout .section-title {
+  text-align: right;
+}
+/* line 169, rtl.scss */
+.rtl-layout .obs-form {
+  direction: rtl;
+}
+/* line 172, rtl.scss */
+.rtl-layout .obs-form .form-field {
+  text-align: right;
+}
+/* line 177, rtl.scss */
+.rtl-layout .concept-set {
+  direction: rtl;
+}
+/* line 180, rtl.scss */
+.rtl-layout .concept-set .concept-name {
+  text-align: right;
+}
+/* line 186, rtl.scss */
+.rtl-layout .datepicker {
+  direction: ltr;
+}
+/* line 189, rtl.scss */
+.rtl-layout .datepicker table {
+  direction: ltr;
+}
+/* line 195, rtl.scss */
+.rtl-layout .nav-tabs {
+  border-bottom: 1px solid #ddd;
+}
+/* line 198, rtl.scss */
+.rtl-layout .nav-tabs > li {
+  float: right;
+  margin-bottom: -1px;
+  margin-left: 2px;
+  margin-right: 0;
+}
+/* line 204, rtl.scss */
+.rtl-layout .nav-tabs > li > a {
+  border-radius: 4px 4px 0 0;
+}
+/* line 211, rtl.scss */
+.rtl-layout .search-box,
+.rtl-layout .filter-section {
+  text-align: right;
+}
+/* line 217, rtl.scss */
+.rtl-layout .breadcrumb {
+  direction: rtl;
+}
+/* line 220, rtl.scss */
+.rtl-layout .breadcrumb > li + li:before {
+  content: "\0020\f053\0020";
+  padding: 0 5px;
+  color: #ccc;
+}
+/* line 228, rtl.scss */
+.rtl-layout .observation-section {
+  text-align: right;
+}
+/* line 231, rtl.scss */
+.rtl-layout .observation-section .obs-value,
+.rtl-layout .observation-section .obs-comment {
+  text-align: right;
+}
+/* line 238, rtl.scss */
+.rtl-layout .registration-form {
+  direction: rtl;
+}
+/* line 241, rtl.scss */
+.rtl-layout .registration-form .form-group {
+  text-align: right;
+}
+/* line 246, rtl.scss */
+.rtl-layout .patient-search-results {
+  direction: rtl;
+}
+/* line 249, rtl.scss */
+.rtl-layout .patient-search-results table {
+  direction: rtl;
+}
+/* line 255, rtl.scss */
+.rtl-layout[lang="fa"] {
+  font-family: "Tahoma", "Arial", sans-serif;
+}
+/* line 258, rtl.scss */
+.rtl-layout[lang="fa"] .persian-number {
+  font-family: "B Nazanin", "Tahoma", sans-serif;
+}
+
+@media print {
+  /* line 266, rtl.scss */
+  .rtl-layout {
+    direction: rtl !important;
+    text-align: right !important;
+  }
+  /* line 270, rtl.scss */
+  .rtl-layout .print-header {
+    text-align: right !important;
+  }
+  /* line 274, rtl.scss */
+  .rtl-layout .print-content {
+    direction: rtl !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 283, rtl.scss */
+  .rtl-layout .navbar-nav,
+  .rtl-layout .navbar-brand {
+    float: none;
+  }
+  /* line 288, rtl.scss */
+  .rtl-layout .sidebar {
+    right: -250px;
+  }
+  /* line 291, rtl.scss */
+  .rtl-layout .sidebar.open {
+    right: 0;
+  }
+}

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for common/domain/services/visitDocumentService.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">common/domain/services/</a> visitDocumentService.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.27% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>34/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>12/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.27% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>34/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.common.domain')
+    .service('visitDocumentService', ['$http', 'auditLogService', 'configurations', '$q', 'messagingService', '$translate', function ($http, auditLogService, configurations, $q, messagingService, $translate) {
+        var removeVoidedDocuments = function (documents) {
+            documents.forEach(function (document) {
+                if (document.voided &amp;&amp; document.image) {
+                    var url = Bahmni.Common.Constants.RESTWS_V1 + "/bahmnicore/visitDocument?filename=" + document.image;
+                    $http.delete(url, {withCredentials: true});
+                }
+            });
+        };
+&nbsp;
+        this.save = function (visitDocument) {
+            var url = Bahmni.Common.Constants.RESTWS_V1 + "/bahmnicore/visitDocument";
+            var isNewVisit = !visitDocument.visitUuid;
+            removeVoidedDocuments(visitDocument.documents);
+            var visitTypeName = configurations.encounterConfig().getVisitTypeByUuid(visitDocument.visitTypeUuid)['name'];
+            var encounterTypeName = configurations.encounterConfig().getEncounterTypeByUuid(visitDocument.encounterTypeUuid)['name'];
+            return $http.post(url, visitDocument).then(function (response) {
+                var promise = isNewVisit ? auditLogService.log(visitDocument.patientUuid, "OPEN_VISIT",
+                    {visitUuid: response.data.visitUuid, visitType: visitTypeName}, encounterTypeName) : <span class="branch-1 cbranch-no" title="branch not covered" >$q.when();</span>
+                return promise.then(function () {
+                    return auditLogService.log(visitDocument.patientUuid, "EDIT_ENCOUNTER",
+                        {
+                            encounterUuid: response.data.encounterUuid,
+                            encounterType: encounterTypeName
+                        }, encounterTypeName).then(function () {
+                            return response;
+                        }
+                    );
+                });
+            });
+        };
+&nbsp;
+        this.saveFile = function (file, patientUuid, encounterTypeName, fileName, fileType) {
+            var searchStr = ";base64";
+            var format = file.split(searchStr)[0].split("/")[1];
+            if (fileType === "video") {
+                format = _.last(_.split(fileName, "."));
+            }
+            var url = Bahmni.Common.Constants.RESTWS_V1 + "/bahmnicore/visitDocument/uploadDocument";
+            return $http.post(url, {
+                content: file.substring(file.indexOf(searchStr) + searchStr.length, file.length),
+                format: format,
+                patientUuid: patientUuid,
+                encounterTypeName: encounterTypeName,
+                fileType: fileType || <span class="branch-1 cbranch-no" title="branch not covered" >"file",</span>
+                fileName: fileName.substring(0, fileName.lastIndexOf('.'))
+            }, {
+                withCredentials: true,
+                headers: {"Accept": "application/json", "Content-Type": "application/json"}
+            }).then(function (response) {
+                return response;
+            }, <span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >                if (error.status === 413) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (!isNaN(error.data.maxDocumentSizeMB)) {</span>
+<span class="cstat-no" title="statement not covered" >                        var maxAllowedSize = roundToNearestHalf(error.data.maxDocumentSizeMB * 0.70);</span>
+<span class="cstat-no" title="statement not covered" >                        messagingService.showMessage("error", $translate.instant("FILE_SIZE_LIMIT_EXCEEDED_MESSAGE", { maxAllowedSize: maxAllowedSize }));</span>
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        messagingService.showMessage("error", $translate.instant("SIZE_LIMIT_EXCEEDED_MESSAGE"));</span>
+                    }
+                }
+<span class="cstat-no" title="statement not covered" >                return $q.reject(error);</span>
+            });
+        };
+&nbsp;
+        var roundToNearestHalf = <span class="fstat-no" title="function not covered" >function (value) {</span>
+<span class="cstat-no" title="statement not covered" >            var floorValue = Math.floor(value);</span>
+<span class="cstat-no" title="statement not covered" >            if ((value - floorValue) &lt; 0.5) {</span>
+<span class="cstat-no" title="statement not covered" >                return floorValue;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return floorValue + 0.5;</span>
+        };
+&nbsp;
+        this.getFileType = function (fileType) {
+            var pdfType = "pdf";
+            var imageType = "image";
+            if (fileType.indexOf(pdfType) !== -1) {
+                return pdfType;
+            }
+            if (fileType.indexOf(imageType) !== -1) {
+                return imageType;
+            }
+            return "not_supported";
+        };
+    }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

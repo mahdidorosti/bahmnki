@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for common/displaycontrols/forms/controllers/versionedFormController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">common/displaycontrols/forms/controllers/</a> versionedFormController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.93% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>68/83</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.59% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>36/51</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>18/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.93% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>68/83</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.common.displaycontrol.forms')
+    .controller('versionedFormController', ['$scope', 'formService', 'appService', '$q', '$state', '$rootScope',
+        function ($scope, formService, appService, $q, $state, $rootScope) {
+            $scope.shouldPromptBrowserReload = true;
+            $scope.showFormsDate = appService.getAppDescriptor().getConfigValue("showFormsDate");
+&nbsp;
+            const getUniqueForms = function (formData) {
+                const uniqueForms = [];
+                _.each(formData, function (item) {
+                    const foundElement = _.find(uniqueForms, function (filteredItem) {
+                        return item.formName === filteredItem.formName;
+                    });
+                    if (foundElement === undefined) {
+                        uniqueForms.push(item);
+                    }
+                });
+                return uniqueForms;
+            };
+            const sortFormDataByLatestDate = function (formData) {
+                return _.sortBy(formData, "encounterDateTime").reverse();
+            };
+&nbsp;
+            function filterForms (formData) {
+                const filteredForms = [];
+                _.each(formData, function (item) {
+                    if ($scope.section.formGroup.length == 0) {
+                        filteredForms.push(item);
+                    } else {
+                        const foundElement = _.includes($scope.section.formGroup, item.formName);
+                        if (foundElement) {
+                            filteredForms.push(item);
+                        }
+                    }
+                });
+                return filteredForms;
+            }
+&nbsp;
+            var latestPublishedForms = function () {
+                return formService.getFormList();
+            };
+&nbsp;
+            var init = function () {
+                $scope.formsNotFound = false;
+                return $q.all([formService.getAllPatientForms($scope.patient.uuid, $scope.section.dashboardConfig.maximumNoOfVisits, $state.params.enrollment), latestPublishedForms()]).then(function (results) {
+                    if (!(results[0] &amp;&amp; results[0].data.length)) {
+                        $scope.formsNotFound = true;
+                        $scope.$emit("no-data-present-event");
+                    } else {
+                        var formListFromObsTab = results[0] &amp;&amp; results[0].data;
+                        var attachedFormList = [];
+                        var latestForms = results[1] &amp;&amp; results[1].data;
+                        var privileges = 'privileges';
+&nbsp;
+                        if (latestForms) {
+                            $scope.formsWithNameTranslations = latestForms.map(function (latestForm) {
+                                _.each(formListFromObsTab, function (item) {
+                                    if (item.formName === latestForm.name) {
+                                        item['privileges'] = latestForm.privileges;
+                                        attachedFormList.push(item);
+                                    }
+                                });
+                                return {
+                                    formName: latestForm.name,
+                                    formNameTranslations: latestForm.nameTranslation ? JSON.parse(latestForm.nameTranslation) : <span class="branch-1 cbranch-no" title="branch not covered" >[]</span>
+                                };
+                            });
+                        }
+                        if (attachedFormList.length == 0) {
+                            attachedFormList = formListFromObsTab;
+                        }
+                        var sortedFormDataByDate = sortFormDataByLatestDate(filterForms(attachedFormList));
+                        if ($scope.isOnDashboard) {
+                            $scope.formData = getUniqueForms(sortedFormDataByDate);
+                        } else {
+                            $scope.formData = sortedFormDataByDate;
+                        }
+                    }
+                });
+            };
+            $scope.doesUserHaveAccessToTheForm = function (data, action) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if ((typeof data.privileges != 'undefined') &amp;&amp; (data.privileges != null) &amp;&amp; (data.privileges.length &gt; 0)) {
+<span class="cstat-no" title="statement not covered" >                    var editable = [];</span>
+<span class="cstat-no" title="statement not covered" >                    var viewable = [];</span>
+<span class="cstat-no" title="statement not covered" >                    data.privileges.forEach(<span class="fstat-no" title="function not covered" >function (formPrivilege) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        _.find($rootScope.currentUser.privileges, <span class="fstat-no" title="function not covered" >function (privilege) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            if (formPrivilege.privilegeName === privilege.name) {</span>
+<span class="cstat-no" title="statement not covered" >                                if (action === 'edit') {</span>
+<span class="cstat-no" title="statement not covered" >                                    editable.push(formPrivilege.editable);</span>
+                                } else {
+<span class="cstat-no" title="statement not covered" >                                    viewable.push(formPrivilege.viewable);</span>
+                                }
+                            }
+                        });
+                    });
+<span class="cstat-no" title="statement not covered" >                    if (action === 'edit') {</span>
+<span class="cstat-no" title="statement not covered" >                        if (editable.includes(true)) {</span>
+<span class="cstat-no" title="statement not covered" >                            return true;</span>
+                        }
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        if (viewable.includes(true)) {</span>
+<span class="cstat-no" title="statement not covered" >                            return true;</span>
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            return false;</span>
+                        }
+                    }
+                } else { return true; }
+            };
+&nbsp;
+            $scope.getDisplayName = function (data) {
+                if ($scope.formsWithNameTranslations &amp;&amp; $scope.formsWithNameTranslations.length &gt; 0) {
+                    var formWithNameTranslation = $scope.formsWithNameTranslations.find(function (formWithNameTranslation) {
+                        return formWithNameTranslation.formName === data.formName;
+                    });
+                    var locale = localStorage.getItem("NG_TRANSLATE_LANG_KEY") || <span class="branch-1 cbranch-no" title="branch not covered" >"en";</span>
+                    var currentLabel = formWithNameTranslation &amp;&amp; formWithNameTranslation.formNameTranslations
+                           .find(function (formNameTranslation) {
+                               return formNameTranslation.locale === locale;
+                           });
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (currentLabel) {
+                        return currentLabel.display;
+                    }
+                }
+&nbsp;
+                return data.formName;
+            };
+&nbsp;
+            $scope.initialization = init();
+&nbsp;
+            $scope.shouldPromptBeforeClose = true;
+&nbsp;
+            $scope.dialogData = {
+                "patient": $scope.patient,
+                "section": $scope.section
+            };
+&nbsp;
+            $scope.getConfigToFetchDataAndShow = function (data) {
+                return {
+                    patient: $scope.patient,
+                    config: {
+                        formName: data.formName,
+                        showGroupDateTime: false,
+                        encounterUuid: data.encounterUuid,
+                        observationUuid: data.uuid,
+                        formType: $scope.section.type,
+                        formDisplayName: $scope.getDisplayName(data)
+                    },
+                    showPrintOption: $scope.section.dashboardConfig.printing ? <span class="branch-0 cbranch-no" title="branch not covered" >true </span>: false,
+                    printForm: $scope.printForm
+                };
+            };
+&nbsp;
+            $scope.printForm = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                $rootScope.$broadcast("event:printForm", $scope.section.dashboardConfig);</span>
+            };
+&nbsp;
+            $scope.getEditObsData = function (observation) {
+                return {
+                    observation: observation,
+                    conceptSetName: $scope.getDisplayName(observation),
+                    conceptDisplayName: $scope.getDisplayName(observation)
+                };
+            };
+        }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

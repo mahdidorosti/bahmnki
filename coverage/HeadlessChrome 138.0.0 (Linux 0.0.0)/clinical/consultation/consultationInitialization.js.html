@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for clinical/consultation/consultationInitialization.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">clinical/consultation/</a> consultationInitialization.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.56% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.56% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.clinical').factory('consultationInitialization',
+    ['$q', 'diagnosisService', '$rootScope', 'encounterService', 'sessionService', 'configurations', '$bahmniCookieStore', 'retrospectiveEntryService', 'conditionsService',
+<span class="fstat-no" title="function not covered" >        function ($q, diagnosisService, $rootScope, encounterService, sessionService, configurations, $bahmniCookieStore, retrospectiveEntryService, conditionsService) {</span>
+<span class="cstat-no" title="statement not covered" >            return <span class="fstat-no" title="function not covered" >function (patientUuid, encounterUuid, programUuid, enrollment, followUpConditionConcept) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (encounterUuid === 'active') {</span>
+<span class="cstat-no" title="statement not covered" >                    encounterUuid = undefined;</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var getEncounterType = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    return encounterService.getEncounterType(programUuid, sessionService.getLoginLocationUuid());</span>
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var consultationMapper = new Bahmni.ConsultationMapper(configurations.dosageFrequencyConfig(), configurations.dosageInstructionConfig(),</span>
+                    configurations.consultationNoteConcept(), configurations.labOrderNotesConcept(), followUpConditionConcept);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var dateUtil = Bahmni.Common.Util.DateUtil;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var getActiveEncounter = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    var currentProviderUuid = $rootScope.currentProvider ? $rootScope.currentProvider.uuid : null;</span>
+<span class="cstat-no" title="statement not covered" >                    var providerData = $bahmniCookieStore.get(Bahmni.Common.Constants.grantProviderAccessDataCookieName);</span>
+<span class="cstat-no" title="statement not covered" >                    return findEncounter(providerData, currentProviderUuid, null);</span>
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var getRetrospectiveEncounter = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    var currentProviderUuid = $rootScope.currentProvider ? $rootScope.currentProvider.uuid : null;</span>
+<span class="cstat-no" title="statement not covered" >                    var providerData = $bahmniCookieStore.get(Bahmni.Common.Constants.grantProviderAccessDataCookieName);</span>
+<span class="cstat-no" title="statement not covered" >                    var encounterDateWithoutHours = dateUtil.getDateWithoutHours(retrospectiveEntryService.getRetrospectiveDate());</span>
+<span class="cstat-no" title="statement not covered" >                    var encounterDate = dateUtil.parseLongDateToServerFormat(encounterDateWithoutHours);</span>
+<span class="cstat-no" title="statement not covered" >                    return findEncounter(providerData, currentProviderUuid, encounterDate).then(<span class="fstat-no" title="function not covered" >function (consultation) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        consultation.encounterDateTime = encounterDateWithoutHours;</span>
+<span class="cstat-no" title="statement not covered" >                        return consultation;</span>
+                    });
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var findEncounter = <span class="fstat-no" title="function not covered" >function (providerData, currentProviderUuid, encounterDate) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    return getEncounterType().then(<span class="fstat-no" title="function not covered" >function (encounterType) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        return encounterService.find({</span>
+                            patientUuid: patientUuid,
+                            providerUuids: !_.isEmpty(providerData) ? [providerData.uuid] : [currentProviderUuid],
+                            includeAll: Bahmni.Common.Constants.includeAllObservations,
+                            encounterDateTimeFrom: encounterDate,
+                            encounterDateTimeTo: encounterDate,
+                            encounterTypeUuids: [encounterType.uuid],
+                            patientProgramUuid: enrollment,
+                            locationUuid: $bahmniCookieStore.get(Bahmni.Common.Constants.locationCookieName).uuid
+                        }).then(<span class="fstat-no" title="function not covered" >function (encounterTransactionResponse) {</span>
+<span class="cstat-no" title="statement not covered" >                            return consultationMapper.map(encounterTransactionResponse.data);</span>
+                        });
+                    });
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var getEncounter = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (encounterUuid) {</span>
+<span class="cstat-no" title="statement not covered" >                        return encounterService.findByEncounterUuid(encounterUuid).then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return consultationMapper.map(response.data);</span>
+                        });
+                    } else <span class="cstat-no" title="statement not covered" >if (!_.isEmpty($rootScope.retrospectiveEntry)) {</span>
+<span class="cstat-no" title="statement not covered" >                        return getRetrospectiveEncounter();</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return getActiveEncounter();</span>
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                return getEncounter().then(<span class="fstat-no" title="function not covered" >function (consultation) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    return diagnosisService.populateDiagnosisInformation(patientUuid, consultation).then(<span class="fstat-no" title="function not covered" >function (diagnosisConsultation) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        diagnosisConsultation.preSaveHandler = new Bahmni.Clinical.Notifier();</span>
+<span class="cstat-no" title="statement not covered" >                        diagnosisConsultation.postSaveHandler = new Bahmni.Clinical.Notifier();</span>
+<span class="cstat-no" title="statement not covered" >                        return diagnosisConsultation;</span>
+                    });
+                }).then(<span class="fstat-no" title="function not covered" >function (consultation) {</span>
+<span class="cstat-no" title="statement not covered" >                    return conditionsService.getConditions(patientUuid).then(<span class="fstat-no" title="function not covered" >function (conditions) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        consultation.conditions = conditions;</span>
+<span class="cstat-no" title="statement not covered" >                        return consultation;</span>
+                    });
+                });
+            };
+        }]
+);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

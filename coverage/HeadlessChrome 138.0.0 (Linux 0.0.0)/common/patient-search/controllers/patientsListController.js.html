@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for common/patient-search/controllers/patientsListController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">common/patient-search/controllers/</a> patientsListController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.75% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>131/151</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75.54% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>105/139</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.24% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>30/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.75% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>131/151</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">42×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">37×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">90×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">96×</span>
+<span class="cline-any cline-yes">66×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">66×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">66×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">96×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">42×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">42×</span>
+<span class="cline-any cline-yes">42×</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.common.patientSearch')
+.controller('PatientsListController', ['$scope', '$window', 'patientService', '$rootScope', 'appService', 'spinner',
+    '$stateParams', '$bahmniCookieStore', 'printer', 'configurationService', "$timeout",
+    function ($scope, $window, patientService, $rootScope, appService, spinner, $stateParams, $bahmniCookieStore, printer, configurationService, $timeout) {
+        $scope.preferExtraIdInSearchResults = appService.getAppDescriptor().getConfigValue("preferExtraIdInSearchResults");
+        $scope.activeHeaders = [];
+        const DEFAULT_FETCH_DELAY = 2000;
+        var patientSearchConfig = appService.getAppDescriptor().getConfigValue("patientSearch");
+        var patientListSpinner;
+        var initialize = function () {
+            var searchTypes = appService.getAppDescriptor().getExtensions("org.bahmni.patient.search", "config").map(mapExtensionToSearchType);
+            $scope.ignoredTabularViewHeadingsConfig = appService.getAppDescriptor().getConfigValue("ignoredTabularViewHeadings") || <span class="branch-1 cbranch-no" title="branch not covered" >[];</span>
+            $scope.identifierHeadingsConfig = appService.getAppDescriptor().getConfigValue("identifierHeadings") || <span class="branch-1 cbranch-no" title="branch not covered" >[];</span>
+            $scope.search = new Bahmni.Common.PatientSearch.Search(_.without(searchTypes, undefined));
+            $scope.search.markPatientEntry();
+            $scope.$watch('search.searchType', function (currentSearchType) {
+                _.isEmpty(currentSearchType) || fetchPatients(currentSearchType);
+            });
+            $scope.$watch('search.activePatients', function (activePatientsList) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (activePatientsList.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >patientListSpinner)</span> {
+<span class="cstat-no" title="statement not covered" >                    hideSpinner(spinner, patientListSpinner, $(".tab-content"));</span>
+                }
+            });
+            $scope.$watch('search.visiblePatients', function (activePatientsList) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (activePatientsList &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >activePatientsList.length &gt; 0)</span> {
+<span class="cstat-no" title="statement not covered" >                    $scope.getHeadings();</span>
+                }
+                else {
+                    <span class="missing-if-branch" title="if path not taken" >I</span>if ($scope.activeHeaders.length != 0) {
+<span class="cstat-no" title="statement not covered" >                        $scope.activeHeaders = [];</span>
+                    }
+                }
+            });
+            if (patientSearchConfig &amp;&amp; patientSearchConfig.serializeSearch) {
+                getPatientCountSeriallyBySearchIndex(0);
+            }
+            else {
+                _.each($scope.search.searchTypes, function (searchType) {
+                    _.isEmpty(searchType) || ($scope.search.searchType != searchType &amp;&amp; getPatientCount(searchType, null));
+                });
+            }
+            if ($rootScope.currentSearchType != null) {
+                $scope.search.switchSearchType($rootScope.currentSearchType);
+            }
+            configurationService.getConfigurations(['identifierTypesConfig']).then(function (response) {
+                $scope.primaryIdentifier = _.find(response.identifierTypesConfig, {primary: true}).name;
+            });
+        };
+&nbsp;
+        $scope.searchPatients = function () {
+            return spinner.forPromise(patientService.search($scope.search.searchParameter)).then(function (response) {
+                $scope.search.updateSearchResults(response.data.pageOfResults);
+                <span class="missing-if-branch" title="if path not taken" >I</span>if ($scope.search.hasSingleActivePatient()) {
+<span class="cstat-no" title="statement not covered" >                    $scope.forwardPatient($scope.search.activePatients[0]);</span>
+                }
+            });
+        };
+&nbsp;
+        $scope.filterPatientsAndSubmit = function () {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if ($scope.search.searchResults.length == 1) {
+                $scope.forwardPatient($scope.search.searchResults[0]);
+            }
+        };
+        var getPatientCount = function (searchType, patientListSpinner) {
+            if (searchType.handler) {
+                var params = { q: searchType.handler, v: "full",
+                    location_uuid: $bahmniCookieStore.get(Bahmni.Common.Constants.locationCookieName).uuid,
+                    provider_uuid: $rootScope.currentProvider.uuid };
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (searchType.additionalParams) {
+<span class="cstat-no" title="statement not covered" >                    params["additionalParams"] = searchType.additionalParams;</span>
+                }
+                patientService.findPatients(params).then(function (response) {
+                    searchType.patientCount = response.data.length;
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if ($scope.search.isSelectedSearch(searchType)) {
+                        $scope.search.updatePatientList(response.data);
+                    }
+                    <span class="missing-if-branch" title="if path not taken" >I</span>if (patientListSpinner) {
+<span class="cstat-no" title="statement not covered" >                        hideSpinner(spinner, patientListSpinner, $(".tab-content"));</span>
+                    }
+                });
+            }
+        };
+&nbsp;
+        var hideSpinner = function (spinnerObj, data, container) {
+            spinnerObj.hide(data, container);
+            $(container).children('patient-list-spinner').hide();
+        };
+&nbsp;
+        $scope.getHeadings = function () {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if ($scope.search.activePatients &amp;&amp; $scope.search.activePatients.length &gt; 0) {
+                var headings = _.chain($scope.search.activePatients[0])
+                    .keys()
+                    .filter(function (heading) {
+                        return _.indexOf($scope.ignoredTabularViewHeadingsConfig, heading) === -1;
+                    })
+                    .value();
+                setActiveHeadings(headings);
+            }
+        };
+&nbsp;
+        var setActiveHeadings = function (headings) {
+            headings.map(function (heading) {
+                var newHeading = { name: heading, sortInfo: heading };
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (!$scope.activeHeaders.find(function (activeHeader) {
+                    return activeHeader.name == newHeading.name &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >activeHeader.sortInfo == newHeading.sortInfo;</span>
+                })) {
+                    $scope.activeHeaders.push(newHeading);
+                }
+            });
+        };
+&nbsp;
+        $scope.sortVisiblePatientsBy = function (sortColumn) {
+            var emptyObjects = _.filter($scope.search.searchResults, function (visiblePatient) {
+                return !_.property(sortColumn)(visiblePatient);
+            });
+&nbsp;
+            var nonEmptyObjects = _.difference($scope.search.searchResults, emptyObjects);
+            var sortedNonEmptyObjects = _.sortBy(nonEmptyObjects, function (visiblePatient) {
+                var value = _.get(visiblePatient, sortColumn);
+                if (!isNaN(Date.parse(value))) {
+                    var parsedDate = moment(value, Bahmni.Common.Constants.clientDateDisplayFormat + " " + Bahmni.Common.Constants.timeDisplayFormat);
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (parsedDate.isValid()) {
+                        return parsedDate.toDate().getTime();
+                    }
+                }
+                else <span class="missing-if-branch" title="if path not taken" >I</span>if (angular.isNumber(value)) {
+<span class="cstat-no" title="statement not covered" >                    return value;</span>
+                }
+                else <span class="missing-if-branch" title="else path not taken" >E</span>if (angular.isString(value)) {
+                    return value.toLowerCase();
+                }
+<span class="cstat-no" title="statement not covered" >                return value;</span>
+            });
+            if ($scope.reverseSort) {
+                sortedNonEmptyObjects.reverse();
+            }
+            $scope.search.visiblePatients = sortedNonEmptyObjects.concat(emptyObjects);
+            $scope.sortColumn = sortColumn;
+            $scope.reverseSort = !$scope.reverseSort;
+        };
+&nbsp;
+        $scope.isHeadingOfLinkColumn = function (heading) {
+            var identifierHeading = _.includes($scope.identifierHeadingsConfig, heading);
+            if (identifierHeading) {
+                return identifierHeading;
+            } else if ($scope.search.searchType &amp;&amp; $scope.search.searchType.links) {
+                return _.find($scope.search.searchType.links, {linkColumn: heading});
+            }
+            else if ($scope.search.searchType &amp;&amp; $scope.search.searchType.linkColumn) {
+                return _.includes([$scope.search.searchType.linkColumn], heading);
+            }
+        };
+        $scope.isHeadingOfName = <span class="fstat-no" title="function not covered" >function (heading) {</span>
+<span class="cstat-no" title="statement not covered" >            return _.includes(Bahmni.Common.PatientSearch.Constants.nameHeading, heading);</span>
+        };
+        $scope.getPrintableHeadings = function () {
+            $scope.getHeadings();
+            var printableHeadings = $scope.activeHeaders.filter(function (heading) {
+                return _.indexOf(Bahmni.Common.PatientSearch.Constants.printIgnoreHeadingsList, heading.name) === -1;
+            });
+            return printableHeadings;
+        };
+        $scope.printPage = function () {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if ($scope.search.searchType.printHtmlLocation != null) {
+                printer.printFromScope($scope.search.searchType.printHtmlLocation, $scope);
+            }
+        };
+&nbsp;
+        $scope.iconAttributeConfig = appService.getAppDescriptor().getConfigValue('iconAttribute') || <span class="branch-1 cbranch-no" title="branch not covered" >{};</span>
+&nbsp;
+        var mapExtensionToSearchType = function (appExtn) {
+            return {
+                name: appExtn.label,
+                display: appExtn.extensionParams.display,
+                handler: appExtn.extensionParams.searchHandler,
+                forwardUrl: appExtn.extensionParams.forwardUrl,
+                targetedTab: appExtn.extensionParams.targetedTab || null,
+                id: appExtn.id,
+                params: appExtn.extensionParams.searchParams,
+                refreshTime: appExtn.extensionParams.refreshTime || <span class="branch-1 cbranch-no" title="branch not covered" >0,</span>
+                view: appExtn.extensionParams.view || Bahmni.Common.PatientSearch.Constants.searchExtensionTileViewType,
+                showPrint: appExtn.extensionParams.showPrint || false,
+                printHtmlLocation: appExtn.extensionParams.printHtmlLocation || null,
+                additionalParams: appExtn.extensionParams.additionalParams,
+                searchColumns: appExtn.extensionParams.searchColumns,
+                translationKey: appExtn.extensionParams.translationKey,
+                linkColumn: appExtn.extensionParams.linkColumn,
+                links: appExtn.extensionParams.links,
+                templateUrl: appExtn.extensionParams.templateUrl || null
+            };
+        };
+&nbsp;
+        var debounceGetPatientCount = _.debounce(<span class="fstat-no" title="function not covered" >function (currentSearchType, patientListSpinner) {</span>
+<span class="cstat-no" title="statement not covered" >            getPatientCount(currentSearchType, patientListSpinner);</span>
+        }, (patientSearchConfig &amp;&amp; patientSearchConfig.fetchDelay) || DEFAULT_FETCH_DELAY, {});
+&nbsp;
+        var showSpinner = function (spinnerObj, container) {
+            $(container).children('patient-list-spinner').show();
+            return spinnerObj.show(container);
+        };
+&nbsp;
+        var fetchPatients = function (currentSearchType) {
+            if (patientListSpinner !== undefined) {
+                hideSpinner(spinner, patientListSpinner, $(".tab-content"));
+            }
+            $rootScope.currentSearchType = currentSearchType;
+            if ($scope.search.isCurrentSearchLookUp()) {
+                patientListSpinner = showSpinner(spinner, $(".tab-content"));
+                if (patientSearchConfig &amp;&amp; patientSearchConfig.debounceSearch) {
+                    debounceGetPatientCount(currentSearchType, patientListSpinner);
+                }
+                else {
+                    getPatientCount(currentSearchType, patientListSpinner);
+                }
+            }
+        };
+&nbsp;
+        $scope.forwardPatient = function (patient, heading) {
+            var options = $.extend({}, $stateParams);
+            $rootScope.patientAdmitLocationStatus = patient.Status;
+            $.extend(options, {
+                patientUuid: patient.uuid,
+                visitUuid: patient.activeVisitUuid || null,
+                encounterUuid: $stateParams.encounterUuid || 'active',
+                programUuid: patient.programUuid || null,
+                enrollment: patient.enrollment || null,
+                forwardUrl: patient.forwardUrl || null,
+                dateEnrolled: patient.dateEnrolled || null
+            });
+            var link = options.forwardUrl ? {
+                url: options.forwardUrl,
+                newTab: true
+            } : {url: $scope.search.searchType.forwardUrl, newTab: false};
+            if ($scope.search.searchType.links) {
+                link = _.find($scope.search.searchType.links, {linkColumn: heading}) || _.find($scope.search.searchType.links, { linkColumn: heading.name }) || link;
+            }
+            if ($scope.search.searchType.targetedTab) {
+                link.targetedTab = $scope.search.searchType.targetedTab;
+            }
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (link.url &amp;&amp; link.url !== null) {
+                var redirectUrl = link.url;
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof link.url === 'object') {
+<span class="cstat-no" title="statement not covered" >                    const rowName = patient[heading.name] ? patient[heading.name].replace(/\s/g, "").toLowerCase() : "";</span>
+<span class="cstat-no" title="statement not covered" >                    redirectUrl = rowName &amp;&amp; link.url[rowName] ? link.url[rowName] : link.url.default;</span>
+                }
+                var newWindow = $window.open(
+                appService.getAppDescriptor().formatUrl(redirectUrl, options, true),
+                link.newTab ? '_blank' : link.targetedTab ? link.targetedTab : '_self');
+                if (link.targetedTab) {
+                    $timeout(<span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                        newWindow.document.title = link.targetedTab;</span>
+<span class="cstat-no" title="statement not covered" >                        newWindow.location.reload();</span>
+                    }, 1000);
+                }
+            }
+        };
+        var getPatientCountSeriallyBySearchIndex = function (index) {
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (index === $scope.search.searchTypes.length) {
+<span class="cstat-no" title="statement not covered" >                return;</span>
+            }
+            var searchType = $scope.search.searchTypes[index];
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (searchType.handler) {
+                var params = {
+                    q: searchType.handler,
+                    v: "full",
+                    location_uuid: $bahmniCookieStore.get(Bahmni.Common.Constants.locationCookieName).uuid,
+                    provider_uuid: $rootScope.currentProvider.uuid
+                };
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (searchType.additionalParams) {
+<span class="cstat-no" title="statement not covered" >                    params["additionalParams"] = searchType.additionalParams;</span>
+                }
+                patientService.findPatients(params).then(<span class="fstat-no" title="function not covered" >function (response) {</span>
+<span class="cstat-no" title="statement not covered" >                    searchType.patientCount = response.data.length;</span>
+<span class="cstat-no" title="statement not covered" >                    if ($scope.search.isSelectedSearch(searchType)) {</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.search.updatePatientList(response.data);</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return getPatientCountSeriallyBySearchIndex(index + 1);</span>
+                });
+            }
+        };
+        initialize();
+    }
+]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

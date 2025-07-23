@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for orders/controllers/orderFulfillmentController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">orders/controllers/</a> orderFulfillmentController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>69/69</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">68.18% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>15/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>19/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>69/69</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+&nbsp;
+angular.module('bahmni.orders').controller('OrderFulfillmentController', ['$scope', '$rootScope', '$stateParams', '$state', '$q', 'patientContext', 'orderService', 'observationsService', 'orderObservationService',
+    'orderTypeService', 'sessionService', 'encounterService', 'spinner', 'messagingService', 'appService', '$anchorScroll', 'orderFulfillmentConfig', 'contextChangeHandler', '$translate',
+    function ($scope, $rootScope, $stateParams, $state, $q, patientContext, orderService, observationsService, orderObservationService,
+              orderTypeService, sessionService, encounterService, spinner, messagingService, appService, $anchorScroll, orderFulfillmentConfig, contextChangeHandler, $translate) {
+        $scope.patient = patientContext.patient;
+        $scope.formName = $stateParams.orderType + Bahmni.Common.Constants.fulfillmentFormSuffix;
+        $scope.fulfillmentConfig = orderFulfillmentConfig;
+        $scope.orderType = $stateParams.orderType;
+        $scope.nextPageLoading = false;
+        $scope.orders = [];
+&nbsp;
+        var getActiveEncounter = function () {
+            var currentProviderUuid = $rootScope.currentProvider ? $rootScope.currentProvider.uuid : <span class="branch-1 cbranch-no" title="branch not covered" >null;</span>
+            return encounterService.find({
+                patientUuid: $scope.patient.uuid,
+                providerUuids: !_.isEmpty(currentProviderUuid) ? [currentProviderUuid] : <span class="branch-1 cbranch-no" title="branch not covered" >null,</span>
+                includeAll: Bahmni.Common.Constants.includeAllObservations,
+                locationUuid: sessionService.getLoginLocationUuid()
+            }).then(function (encounterTransactionResponse) {
+                $scope.encounter = encounterTransactionResponse.data;
+                return $scope.encounter;
+            });
+        };
+&nbsp;
+        $scope.getOrders = function () {
+            var patientUuid = patientContext.patient.uuid;
+            $scope.orderTypeUuid = orderTypeService.getOrderTypeUuid($stateParams.orderType);
+            var includeObs = false;
+            var params = {
+                patientUuid: patientUuid,
+                orderTypeUuid: $scope.orderTypeUuid,
+                conceptNames: $scope.config.conceptNames,
+                includeObs: includeObs,
+                numberOfVisits: $scope.config.numberOfVisits,
+                obsIgnoreList: $scope.config.obsIgnoreList,
+                visitUuid: $scope.visitUuid,
+                orderUuid: $scope.orderUuid,
+                locationUuids: $rootScope.facilityLocationUuids
+            };
+            return orderService.getOrders(params).then(function (response) {
+                var data = response.data;
+                $scope.orders.push.apply($scope.orders, data);
+                $scope.orders.forEach(function (order) {
+                    order.bahmniObservations = _.filter($scope.encounter.observations, function (observation) {
+                        return observation.orderUuid === order.orderUuid;
+                    });
+                    if (order.bahmniObservations.length &gt; 0) {
+                        order.showForm = true;
+                    }
+                });
+            });
+        };
+&nbsp;
+        var getObservationsForOrders = function () {
+            var orderLabelConcept = appService.getAppDescriptor().getConfigValue("orderLabelConcept");
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (orderLabelConcept) {
+                return observationsService.fetch(patientContext.patient.uuid, [orderLabelConcept], null, $scope.config.numberOfVisits, $scope.visitUuid, null, false)
+                .then(function (response) {
+                    $scope.selectedOrderLabel = new Map();
+                    var orderObservationsData = _(response.data)
+                                .groupBy('orderUuid')
+                                .map(function (items, orderUuid, concept) {
+                                    return {
+                                        orderUuid: orderUuid,
+                                        conceptValue: concept[orderUuid][0].value,
+                                        dataType: concept[orderUuid][0].concept.dataType
+                                    };
+                                }).value();
+                    orderObservationsData.forEach(function (item) {
+                        var orderUuid = item.orderUuid;
+                        var dataType = item.dataType;
+                        var conceptValue = item.conceptValue;
+&nbsp;
+                        if (dataType === "Coded") {
+                            $scope.selectedOrderLabel[orderUuid] = conceptValue.name;
+                        } else <span class="missing-if-branch" title="else path not taken" >E</span>if (dataType === "Text") {
+                            $scope.selectedOrderLabel[orderUuid] = conceptValue;
+                        }
+                    });
+                });
+            }
+        };
+&nbsp;
+        $scope.toggleShowOrderForm = function (order) {
+            order.showForm = !order.showForm;
+        };
+&nbsp;
+        var init = function () {
+            return getActiveEncounter().then(getObservationsForOrders).then($scope.getOrders);
+        };
+&nbsp;
+        spinner.forPromise(init());
+        $scope.config = $scope.fulfillmentConfig || <span class="branch-1 cbranch-no" title="branch not covered" >{};</span>
+        $anchorScroll();
+&nbsp;
+        $scope.isFormValid = function () {
+            var contxChange = contextChangeHandler.execute();
+            var shouldAllow = contxChange["allow"];
+            if (!shouldAllow) {
+                var errorMessage = contxChange["errorMessage"] ? <span class="branch-0 cbranch-no" title="branch not covered" >contxChange["errorMessage"] </span>: "{{'ORDERS_FORM_ERRORS_MESSAGE_KEY' | translate }}";
+                messagingService.showMessage('error', errorMessage);
+            }
+            return shouldAllow;
+        };
+&nbsp;
+        $scope.getEmptyMessage = function () {
+            return $translate.instant('NO_ORDERS_PRESENT', {orderType: $scope.orderType});
+        };
+&nbsp;
+        $scope.$on("event:saveOrderObservations", function () {
+            if (!$scope.isFormValid()) {
+                $scope.$parent.$broadcast("event:errorsOnForm");
+                return $q.when({});
+            }
+            var savePromise = orderObservationService.save($scope.orders, $scope.patient, sessionService.getLoginLocationUuid());
+            spinner.forPromise(savePromise.then(function () {
+                $state.transitionTo($state.current, $state.params, {
+                    reload: true,
+                    inherit: false,
+                    notify: true
+                }).then(function () {
+                    messagingService.showMessage('info', 'Saved');
+                });
+            }).catch(function (error) {
+                var message = $translate.instant("DEFAULT_SERVER_ERROR_MESSAGE");
+                try {
+                /* This is a dirty fix to do, the real reason of failure is because of there is no visit type assosiated with
+                 save request to create a new visit in mrs.
+                  */
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (error.data.error.message.indexOf("Visit Type is required") &gt;= 0) {
+                        message = $translate.instant("VISIT_CLOSED_CREATE_NEW_ERROR_MESSAGE");
+                    }
+                } catch (e) { /* ignore the error */ }
+                messagingService.showMessage('error', message);
+            }));
+        });
+    }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

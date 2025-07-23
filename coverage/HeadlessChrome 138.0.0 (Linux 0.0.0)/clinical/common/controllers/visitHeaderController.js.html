@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for clinical/common/controllers/visitHeaderController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">clinical/common/controllers/</a> visitHeaderController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>42/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>42/42</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.clinical')
+    .controller('VisitHeaderController', ['$rootScope', '$scope', '$state', 'clinicalAppConfigService', 'configurations', 'encounterService', 'patientContext', 'visitHistory', 'visitConfig', 'contextChangeHandler', '$location', '$stateParams', 'urlHelper',
+        function ($rootScope, $scope, $state, clinicalAppConfigService, configurations, encounterService, patientContext, visitHistory, visitConfig, contextChangeHandler, $location, $stateParams, urlHelper) {
+            $scope.patient = patientContext.patient;
+            $scope.visitHistory = visitHistory;
+            $scope.consultationBoardLink = clinicalAppConfigService.getConsultationBoardLink();
+            $scope.showControlPanel = false;
+            $scope.visitTabConfig = visitConfig;
+            $scope.showMobileMenu = false;
+            $scope.visitPage = true;
+&nbsp;
+            var encounterTypeUuid = configurations.encounterConfig().getPatientDocumentEncounterTypeUuid();
+            $scope.patientDocumentsPromise = encounterService.getEncountersForEncounterType($scope.patient.uuid, encounterTypeUuid).then(function (response) {
+                return new Bahmni.Clinical.PatientFileObservationsMapper().map(response.data.results);
+            });
+&nbsp;
+            $scope.toggleMobileMenu = function () {
+                $scope.showMobileMenu = !$scope.showMobileMenu;
+            };
+&nbsp;
+            $scope.switchTab = function (tab) {
+                $scope.visitTabConfig.switchTab(tab);
+                $rootScope.$broadcast('event:clearVisitBoard', tab);
+            };
+&nbsp;
+            $scope.gotoPatientDashboard = function () {
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (contextChangeHandler.execute()["allow"]) {
+                    $location.path($stateParams.configName + "/patient/" + patientContext.patient.uuid + "/dashboard");
+                }
+            };
+&nbsp;
+            $scope.openConsultation = function () {
+                var board = clinicalAppConfigService.getAllConsultationBoards()[0];
+                var urlPrefix = urlHelper.getPatientUrl();
+                $scope.collapseControlPanel();
+                $rootScope.hasVisitedConsultation = true;
+                var url = "/" + $stateParams.configName + (board.url ? urlPrefix + "/" + board.url : <span class="branch-1 cbranch-no" title="branch not covered" >urlPrefix)</span>;
+                var extensionParams = board.extensionParams;
+                var queryParams = [];
+                if ($stateParams.programUuid) {
+                    var programParams = {
+                        "programUuid": $stateParams.programUuid,
+                        "enrollment": $stateParams.enrollment
+                    };
+                    extensionParams = _.merge(programParams, extensionParams);
+                }
+                angular.forEach(extensionParams, function (extensionParamValue, extensionParamKey) {
+                    queryParams.push(extensionParamKey + "=" + extensionParamValue);
+                });
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (!_.isEmpty(queryParams)) {
+                    url = url + "?" + queryParams.join("&amp;");
+                }
+&nbsp;
+                $location.url(url);
+            };
+&nbsp;
+            $scope.closeTab = function (tab) {
+                $scope.visitTabConfig.closeTab(tab);
+                $rootScope.$broadcast("event:clearVisitBoard", tab);
+            };
+&nbsp;
+            $scope.print = function () {
+                $rootScope.$broadcast("event:printVisitTab", $scope.visitTabConfig.currentTab);
+            };
+&nbsp;
+            $scope.showPrint = function () {
+                return $scope.visitTabConfig.showPrint();
+            };
+        }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

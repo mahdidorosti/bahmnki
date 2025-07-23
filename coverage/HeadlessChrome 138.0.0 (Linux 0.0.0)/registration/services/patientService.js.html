@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for registration/services/patientService.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">registration/services/</a> patientService.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">51.43% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">51.43% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>18/35</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('bahmni.registration')
+    .factory('patientService', ['$http', '$rootScope', '$bahmniCookieStore', '$q', 'patientServiceStrategy', 'sessionService', '$translate', 'appService', function ($http, $rootScope, $bahmniCookieStore, $q, patientServiceStrategy, sessionService, $translate, appService) {
+        var openmrsUrl = Bahmni.Registration.Constants.openmrsUrl;
+        var baseOpenMRSRESTURL = Bahmni.Registration.Constants.baseOpenMRSRESTURL;
+&nbsp;
+        var search = function (query, identifier, addressFieldName, addressFieldValue, customAttributeValue,
+                               offset, customAttributeFields, programAttributeFieldName, programAttributeFieldValue, addressSearchResultsConfig,
+                               patientSearchResultsConfig, filterOnAllIdentifiers) {
+            var config = {
+                params: {
+                    q: query,
+                    identifier: identifier,
+                    s: "byIdOrNameOrVillage",
+                    addressFieldName: addressFieldName,
+                    addressFieldValue: addressFieldValue,
+                    customAttribute: customAttributeValue,
+                    startIndex: offset || 0,
+                    patientAttributes: customAttributeFields,
+                    programAttributeFieldName: programAttributeFieldName,
+                    programAttributeFieldValue: programAttributeFieldValue,
+                    addressSearchResultsConfig: addressSearchResultsConfig,
+                    patientSearchResultsConfig: patientSearchResultsConfig,
+                    loginLocationUuid: sessionService.getLoginLocationUuid(),
+                    filterOnAllIdentifiers: filterOnAllIdentifiers
+                },
+                withCredentials: true
+            };
+            return patientServiceStrategy.search(config);
+        };
+&nbsp;
+        var searchByIdentifier = <span class="fstat-no" title="function not covered" >function (identifier) {</span>
+<span class="cstat-no" title="statement not covered" >            return $http.get(Bahmni.Common.Constants.bahmniCommonsSearchUrl + "/patient", {</span>
+                method: "GET",
+                params: {
+                    identifier: identifier,
+                    loginLocationUuid: sessionService.getLoginLocationUuid()
+                },
+                withCredentials: true
+            });
+        };
+&nbsp;
+        var searchByNameOrIdentifier = function (query, limit) {
+            return $http.get(Bahmni.Common.Constants.bahmniCommonsSearchUrl + "/patient/lucene", {
+                method: "GET",
+                params: {
+                    identifier: query,
+                    filterOnAllIdentifiers: true,
+                    q: query,
+                    s: "byIdOrName",
+                    limit: limit,
+                    loginLocationUuid: sessionService.getLoginLocationUuid()
+                },
+                withCredentials: true
+            });
+        };
+&nbsp;
+        var get = function (uuid) {
+            return patientServiceStrategy.get(uuid);
+        };
+&nbsp;
+        var create = function (patient, jumpAccepted) {
+            return patientServiceStrategy.create(patient, jumpAccepted);
+        };
+&nbsp;
+        var update = <span class="fstat-no" title="function not covered" >function (patient, openMRSPatient) {</span>
+<span class="cstat-no" title="statement not covered" >            return patientServiceStrategy.update(patient, openMRSPatient, $rootScope.patientConfiguration.attributeTypes);</span>
+        };
+&nbsp;
+        var getAllPatientIdentifiers = <span class="fstat-no" title="function not covered" >function (uuid) {</span>
+<span class="cstat-no" title="statement not covered" >            var url = Bahmni.Registration.Constants.basePatientUrl + uuid + "/identifier";</span>
+<span class="cstat-no" title="statement not covered" >            return $http.get(url, {</span>
+                method: "GET",
+                params: {
+                    includeAll: true
+                },
+                withCredentials: true
+            });
+        };
+&nbsp;
+        var updateImage = <span class="fstat-no" title="function not covered" >function (uuid, image) {</span>
+<span class="cstat-no" title="statement not covered" >            var url = baseOpenMRSRESTURL + "/personimage/";</span>
+<span class="cstat-no" title="statement not covered" >            var data = {</span>
+                "person": {"uuid": uuid},
+                "base64EncodedImage": image
+            };
+<span class="cstat-no" title="statement not covered" >            var config = {</span>
+                withCredentials: true,
+                headers: {"Accept": "application/json", "Content-Type": "application/json"}
+            };
+<span class="cstat-no" title="statement not covered" >            return $http.post(url, data, config);</span>
+        };
+&nbsp;
+        var getRegistrationMessage = <span class="fstat-no" title="function not covered" >function (patientId, name, age, gender) {</span>
+<span class="cstat-no" title="statement not covered" >            var locationName = $rootScope.facilityVisitLocation &amp;&amp; $rootScope.facilityVisitLocation.name ? $rootScope.facilityVisitLocation.name : $rootScope.loggedInLocation.name;</span>
+<span class="cstat-no" title="statement not covered" >            var message = $translate.instant(appService.getAppDescriptor().getConfigValue("registrationMessage") || Bahmni.Registration.Constants.registrationMessage);</span>
+<span class="cstat-no" title="statement not covered" >            message = message.replace("#clinicName", locationName);</span>
+<span class="cstat-no" title="statement not covered" >            message = message.replace("#patientId", patientId);</span>
+<span class="cstat-no" title="statement not covered" >            message = message.replace("#name", name);</span>
+<span class="cstat-no" title="statement not covered" >            message = message.replace("#age", age);</span>
+<span class="cstat-no" title="statement not covered" >            message = message.replace("#gender", gender);</span>
+<span class="cstat-no" title="statement not covered" >            message = message.replace("#helpDeskNumber", $rootScope.helpDeskNumber);</span>
+<span class="cstat-no" title="statement not covered" >            return message;</span>
+        };
+&nbsp;
+        return {
+            search: search,
+            searchByIdentifier: searchByIdentifier,
+            create: create,
+            update: update,
+            get: get,
+            updateImage: updateImage,
+            searchByNameOrIdentifier: searchByNameOrIdentifier,
+            getAllPatientIdentifiers: getAllPatientIdentifiers,
+            getRegistrationMessage: getRegistrationMessage
+        };
+    }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jul 20 2025 10:17:22 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
