@@ -270,4 +270,17 @@ describe('OpenmrsPatientMapper', function () {
         expect(patient.isDead).toBeTruthy();
   });
 
+  it('should map when input lacks patient wrapper', function () {
+        var raw = angular.copy(openmrsPatient.patient);
+        raw.relationships = openmrsPatient.relationships;
+        var patient = mapper.map(raw);
+        expect(patient.uuid).toBe(raw.uuid);
+        expect(patient.givenName).toBe(raw.person.preferredName.givenName);
+  });
+
+  it('should return null when patient lacks person info', function () {
+        var invalid = { uuid: '123' };
+        expect(mapper.map(invalid)).toBeNull();
+  });
+
 });
