@@ -51,7 +51,7 @@ Bahmni.Common.Domain.AttributeFormatter = (function () {
             attr.hydratedObject = value.conceptUuid;
         } else if (attributeType.format == "org.openmrs.util.AttributableDate" || attributeType.format == "org.openmrs.customdatatype.datatype.DateDatatype") {
             var mnt = moment(value);
-            attr.value = mnt.format('YYYY-MM-DD');
+            attr.value = mnt.locale('en').format('YYYY-MM-DD');
         } else {
             attr.value = value.toString();
         }

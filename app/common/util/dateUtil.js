@@ -82,7 +82,7 @@ Bahmni.Common.Util.DateUtil = {
     },
 
     getDateWithoutTime: function (datetime) {
-        return datetime ? moment(datetime).format("YYYY-MM-DD") : null;
+        return datetime ? moment(datetime).locale('en').format("YYYY-MM-DD") : null;
     },
 
     getDateInMonthsAndYears: function (date, format) {
@@ -289,20 +289,20 @@ Bahmni.Common.Util.DateUtil = {
     },
 
     parseLongDateToServerFormat: function (longDate) {
-        return longDate ? moment(longDate).format("YYYY-MM-DDTHH:mm:ss.SSSZZ") : null;
+        return longDate ? moment(longDate).locale('en').format("YYYY-MM-DDTHH:mm:ss.SSSZZ") : null;
     },
 
     parseServerDateToDate: function (longDate) {
         return longDate ? moment(longDate, "YYYY-MM-DDTHH:mm:ss.SSSZZ").toDate() : null;
     },
     getDateTimeInSpecifiedFormat: function (date, format) {
-        return date ? moment(date).format(format) : null;
+        return date ? moment(date).locale('en').format(format) : null;
     },
     getISOString: function (date) {
         return date ? moment(date).toDate().toISOString() : null;
     },
     isBeforeTime: function (time, otherTime) {
-        return moment(time, clientTimeDisplayFormat).format('YYYY-MM-DD');
+        return moment(time, clientTimeDisplayFormat).locale('en').format('YYYY-MM-DD');
     },
     getWeekStartDate: function (date, startOfWeek) {
         var daysToBeSubtracted = this.subtractISOWeekDays(date, startOfWeek);
