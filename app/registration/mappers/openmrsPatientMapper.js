@@ -36,12 +36,12 @@ angular.module('bahmni.registration').factory('openmrsPatientMapper', ['patient'
             },
 
             map = function (openmrsPatient) {
-                var relationships = openmrsPatient.relationships;
-                openmrsPatient = openmrsPatient.patient;
-                var openmrsPerson = openmrsPatient.person;
+                var patientData = openmrsPatient.patient || openmrsPatient;
+                var relationships = openmrsPatient.relationships || patientData.relationships;
+                var openmrsPerson = patientData.person;
                 var patient = patientModel.create();
                 var birthDate = parseDate(openmrsPerson.birthdate);
-                patient.uuid = openmrsPatient.uuid;
+                patient.uuid = patientData.uuid;
                 patient.givenName = openmrsPerson.preferredName.givenName;
                 patient.middleName = openmrsPerson.preferredName.middleName;
                 patient.familyName = openmrsPerson.preferredName.familyName;
@@ -50,7 +50,7 @@ angular.module('bahmni.registration').factory('openmrsPatientMapper', ['patient'
                 patient.gender = openmrsPerson.gender;
                 patient.address = mapAddress(openmrsPerson.preferredAddress);
                 patient.birthtime = parseDate(openmrsPerson.birthtime);
-                patient.image = Bahmni.Registration.Constants.patientImageUrlByPatientUuid + openmrsPatient.uuid + "&q=" + new Date().toISOString();
+                patient.image = Bahmni.Registration.Constants.patientImageUrlByPatientUuid + patientData.uuid + "&q=" + new Date().toISOString();
                 patient.registrationDate = Bahmni.Common.Util.DateUtil.parse(openmrsPerson.auditInfo.dateCreated);
                 patient.dead = openmrsPerson.dead;
                 patient.isDead = patient.dead;
@@ -60,7 +60,7 @@ angular.module('bahmni.registration').factory('openmrsPatientMapper', ['patient'
                 patient.bloodGroup = openmrsPerson.bloodGroup;
                 mapAttributes(patient, openmrsPerson.attributes);
                 mapRelationships(patient, relationships);
-                _.assign(patient, identifiers.mapIdentifiers(openmrsPatient.identifiers));
+                _.assign(patient, identifiers.mapIdentifiers(patientData.identifiers));
 
                 return patient;
             };
