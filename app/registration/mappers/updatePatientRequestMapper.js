@@ -94,7 +94,7 @@ Bahmni.Registration.UpdatePatientRequestMapper = (function () {
             attr.hydratedObject = value.conceptUuid;
         } else if (attributeType.format === "org.openmrs.util.AttributableDate") {
             var mnt = moment(value);
-            attr.value = mnt.format('YYYY-MM-DDTHH:mm:ss.SSSZZ');
+            attr.value = mnt.locale('en').format('YYYY-MM-DDTHH:mm:ss.SSSZZ');
         } else {
             attr.value = value.toString();
         }
@@ -107,7 +107,7 @@ Bahmni.Registration.UpdatePatientRequestMapper = (function () {
         } else if (age !== undefined) {
             mnt = moment(this.currentDate).subtract('days', age.days).subtract('months', age.months).subtract('years', age.years);
         }
-        return mnt.format('YYYY-MM-DDTHH:mm:ss.SSSZZ');
+        return mnt.locale('en').format('YYYY-MM-DDTHH:mm:ss.SSSZZ');
     };
 
     return UpdatePatientRequestMapper;
